@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+./hhclient/HHClient.hpp
+string
+-
+vector
+-
+
+/usr/local/hhit/detection/mserver/hhclient/main.cpp
+iostream
+-
+fstream
+-
+string
+-
+stdlib.h
+-
+HHClient.hpp
+/usr/local/hhit/detection/mserver/hhclient/HHClient.hpp
+
