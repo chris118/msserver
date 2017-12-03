@@ -119,16 +119,16 @@ void *Server::WorkThreadProc() {
 //            std::for_each(alarm_image_data.begin(), alarm_image_data.end(), [](char c) { std::cout << c; });
             ifs_alarm.close();
 
-            //src_image
-            std::ifstream ifs_src(src_image);
-            if(!ifs_src)
-            {
-                cout << "Error open file..." << endl;
-                continue;
-            }
-            //If you really need it in a string you can initialize it the same way as the vector
-            std::string src_image_data = std::string(std::istreambuf_iterator<char>(ifs_src), std::istreambuf_iterator<char>());
-            ifs_src.close();
+            // //src_image
+            // std::ifstream ifs_src(src_image);
+            // if(!ifs_src)
+            // {
+            //     cout << "Error open file..." << endl;
+            //     continue;
+            // }
+            // //If you really need it in a string you can initialize it the same way as the vector
+            // std::string src_image_data = std::string(std::istreambuf_iterator<char>(ifs_src), std::istreambuf_iterator<char>());
+            // ifs_src.close();
             
             // send alarm
             AlarmInfo info;
@@ -143,9 +143,11 @@ void *Server::WorkThreadProc() {
             info.set_end_timestamp(end_timestamp);
             info.set_credibility(credibility);
             
-            info.set_alarm_pic(alarm_image_data);
-            info.set_alarm_vid("");//TODO
+            info.set_alarm_vid("");
             info.set_src_image("");
+            info.set_alarm_pic(alarm_image_data);
+            // info.set_alarm_pic("");
+
             
 
             Server::SendToAll(packet_index, info);

@@ -57,9 +57,33 @@ include CMakeFiles/server.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/server.dir/flags.make
 
+CMakeFiles/server.dir/hhthread.cpp.o: CMakeFiles/server.dir/flags.make
+CMakeFiles/server.dir/hhthread.cpp.o: hhthread.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/usr/local/hhit/detection/mserver/server/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/server.dir/hhthread.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/server.dir/hhthread.cpp.o -c /usr/local/hhit/detection/mserver/server/hhthread.cpp
+
+CMakeFiles/server.dir/hhthread.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/server.dir/hhthread.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /usr/local/hhit/detection/mserver/server/hhthread.cpp > CMakeFiles/server.dir/hhthread.cpp.i
+
+CMakeFiles/server.dir/hhthread.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/server.dir/hhthread.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /usr/local/hhit/detection/mserver/server/hhthread.cpp -o CMakeFiles/server.dir/hhthread.cpp.s
+
+CMakeFiles/server.dir/hhthread.cpp.o.requires:
+
+.PHONY : CMakeFiles/server.dir/hhthread.cpp.o.requires
+
+CMakeFiles/server.dir/hhthread.cpp.o.provides: CMakeFiles/server.dir/hhthread.cpp.o.requires
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/hhthread.cpp.o.provides.build
+.PHONY : CMakeFiles/server.dir/hhthread.cpp.o.provides
+
+CMakeFiles/server.dir/hhthread.cpp.o.provides.build: CMakeFiles/server.dir/hhthread.cpp.o
+
+
 CMakeFiles/server.dir/main.cpp.o: CMakeFiles/server.dir/flags.make
 CMakeFiles/server.dir/main.cpp.o: main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/usr/local/hhit/detection/mserver/server/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/server.dir/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/usr/local/hhit/detection/mserver/server/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/server.dir/main.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/server.dir/main.cpp.o -c /usr/local/hhit/detection/mserver/server/main.cpp
 
 CMakeFiles/server.dir/main.cpp.i: cmake_force
@@ -83,7 +107,7 @@ CMakeFiles/server.dir/main.cpp.o.provides.build: CMakeFiles/server.dir/main.cpp.
 
 CMakeFiles/server.dir/client.cpp.o: CMakeFiles/server.dir/flags.make
 CMakeFiles/server.dir/client.cpp.o: client.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/usr/local/hhit/detection/mserver/server/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/server.dir/client.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/usr/local/hhit/detection/mserver/server/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/server.dir/client.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/server.dir/client.cpp.o -c /usr/local/hhit/detection/mserver/server/client.cpp
 
 CMakeFiles/server.dir/client.cpp.i: cmake_force
@@ -107,7 +131,7 @@ CMakeFiles/server.dir/client.cpp.o.provides.build: CMakeFiles/server.dir/client.
 
 CMakeFiles/server.dir/server.cpp.o: CMakeFiles/server.dir/flags.make
 CMakeFiles/server.dir/server.cpp.o: server.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/usr/local/hhit/detection/mserver/server/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/server.dir/server.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/usr/local/hhit/detection/mserver/server/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/server.dir/server.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/server.dir/server.cpp.o -c /usr/local/hhit/detection/mserver/server/server.cpp
 
 CMakeFiles/server.dir/server.cpp.i: cmake_force
@@ -127,30 +151,6 @@ CMakeFiles/server.dir/server.cpp.o.provides: CMakeFiles/server.dir/server.cpp.o.
 .PHONY : CMakeFiles/server.dir/server.cpp.o.provides
 
 CMakeFiles/server.dir/server.cpp.o.provides.build: CMakeFiles/server.dir/server.cpp.o
-
-
-CMakeFiles/server.dir/hhthread.cpp.o: CMakeFiles/server.dir/flags.make
-CMakeFiles/server.dir/hhthread.cpp.o: hhthread.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/usr/local/hhit/detection/mserver/server/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/server.dir/hhthread.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/server.dir/hhthread.cpp.o -c /usr/local/hhit/detection/mserver/server/hhthread.cpp
-
-CMakeFiles/server.dir/hhthread.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/server.dir/hhthread.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /usr/local/hhit/detection/mserver/server/hhthread.cpp > CMakeFiles/server.dir/hhthread.cpp.i
-
-CMakeFiles/server.dir/hhthread.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/server.dir/hhthread.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /usr/local/hhit/detection/mserver/server/hhthread.cpp -o CMakeFiles/server.dir/hhthread.cpp.s
-
-CMakeFiles/server.dir/hhthread.cpp.o.requires:
-
-.PHONY : CMakeFiles/server.dir/hhthread.cpp.o.requires
-
-CMakeFiles/server.dir/hhthread.cpp.o.provides: CMakeFiles/server.dir/hhthread.cpp.o.requires
-	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/hhthread.cpp.o.provides.build
-.PHONY : CMakeFiles/server.dir/hhthread.cpp.o.provides
-
-CMakeFiles/server.dir/hhthread.cpp.o.provides.build: CMakeFiles/server.dir/hhthread.cpp.o
 
 
 CMakeFiles/server.dir/protobuf/alarm.pb.cc.o: CMakeFiles/server.dir/flags.make
@@ -275,10 +275,10 @@ CMakeFiles/server.dir/db/sqlite3pp.cpp.o.provides.build: CMakeFiles/server.dir/d
 
 # Object files for target server
 server_OBJECTS = \
+"CMakeFiles/server.dir/hhthread.cpp.o" \
 "CMakeFiles/server.dir/main.cpp.o" \
 "CMakeFiles/server.dir/client.cpp.o" \
 "CMakeFiles/server.dir/server.cpp.o" \
-"CMakeFiles/server.dir/hhthread.cpp.o" \
 "CMakeFiles/server.dir/protobuf/alarm.pb.cc.o" \
 "CMakeFiles/server.dir/socket_base/Socket.cpp.o" \
 "CMakeFiles/server.dir/utility/Utility.cpp.o" \
@@ -288,10 +288,10 @@ server_OBJECTS = \
 # External object files for target server
 server_EXTERNAL_OBJECTS =
 
+server: CMakeFiles/server.dir/hhthread.cpp.o
 server: CMakeFiles/server.dir/main.cpp.o
 server: CMakeFiles/server.dir/client.cpp.o
 server: CMakeFiles/server.dir/server.cpp.o
-server: CMakeFiles/server.dir/hhthread.cpp.o
 server: CMakeFiles/server.dir/protobuf/alarm.pb.cc.o
 server: CMakeFiles/server.dir/socket_base/Socket.cpp.o
 server: CMakeFiles/server.dir/utility/Utility.cpp.o
@@ -307,10 +307,10 @@ CMakeFiles/server.dir/build: server
 
 .PHONY : CMakeFiles/server.dir/build
 
+CMakeFiles/server.dir/requires: CMakeFiles/server.dir/hhthread.cpp.o.requires
 CMakeFiles/server.dir/requires: CMakeFiles/server.dir/main.cpp.o.requires
 CMakeFiles/server.dir/requires: CMakeFiles/server.dir/client.cpp.o.requires
 CMakeFiles/server.dir/requires: CMakeFiles/server.dir/server.cpp.o.requires
-CMakeFiles/server.dir/requires: CMakeFiles/server.dir/hhthread.cpp.o.requires
 CMakeFiles/server.dir/requires: CMakeFiles/server.dir/protobuf/alarm.pb.cc.o.requires
 CMakeFiles/server.dir/requires: CMakeFiles/server.dir/socket_base/Socket.cpp.o.requires
 CMakeFiles/server.dir/requires: CMakeFiles/server.dir/utility/Utility.cpp.o.requires

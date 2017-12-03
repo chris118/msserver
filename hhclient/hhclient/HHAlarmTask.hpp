@@ -51,7 +51,7 @@ public:
                 cout << "flag:" << header.flag << " seq: " << header.seq <<  " length: " << header.msg_length << endl;
                 if(header.flag != 0xffff){
                     HHPRINT("bad package, continue");
-                    continue;
+                    break;
                 }
                 
                 //收消息体
@@ -62,7 +62,7 @@ public:
                 if(messageSize > MAXRECV){
                     int left_length = messageSize;
                     int read_length = 0;
-                    const int TRUNK_SIZE = 100;
+                    const int TRUNK_SIZE = 400;
 
                     while (left_length > 0) {
                         if(left_length > TRUNK_SIZE){
@@ -88,12 +88,12 @@ public:
                 const ::google::protobuf::Descriptor*descriptor =AlarmInfo::descriptor();
                 const google::protobuf::Message* prototype = google::protobuf::MessageFactory::generated_factory()->GetPrototype(descriptor);
                 google::protobuf::Message* msgProtobuf = prototype->New();
-                bool ret = msgProtobuf->ParseFromArray(protoMsgBuf, (int)sizeof(protoMsgBuf));
+                bool ret = msgProtobuf->ParseFromArray(protoMsgBuf, messageSize);
                 if (ret == false)
                 {
                     cout << "Deserialize error !" << endl;
                     sleep(2);
-                    continue;
+                    break;
                 }
                 
                 AlarmInfo *alarm_info = static_cast<class AlarmInfo*>(msgProtobuf) ;

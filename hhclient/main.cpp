@@ -30,12 +30,15 @@ class HHCallback: public HHlientCallback{
         cout << "credibility " << alarm.credibility << endl;
         
         //save alarm image
-        char buffer_alarm[256];
-        sprintf(buffer_alarm, "alarm_%d.jpg", alarm.id);
-        cout << "save alarm image-->" << buffer_alarm << "  size = " << alarm.alarm_pic_size << endl;
-        ofstream os_alarm(buffer_alarm,ios::binary);
-        os_alarm.write(alarm.alarm_pic, alarm.alarm_pic_size);
-        os_alarm.close();
+        if(alarm.alarm_pic_size > 1){
+            char buffer_alarm[256];
+            sprintf(buffer_alarm, "./output/alarm_%d.jpg", alarm.id);
+            cout << "save alarm image:" << buffer_alarm << "  size = " << alarm.alarm_pic_size << endl;
+            ofstream os_alarm(buffer_alarm,ios::binary);
+            os_alarm.write(alarm.alarm_pic, alarm.alarm_pic_size);
+            os_alarm.close();
+        }
+
 
         //  //save alarm image
         // char buffer_source[256];

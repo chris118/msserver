@@ -1,0 +1,45 @@
+*.cmake
+CMakeCache.txt
+CMakeFiles/
+Makefile
+*.caffemodel
+*.prototxt
+hhdetector
+
+
+encapsulation_mysql/CMakeFiles/
+carDetector/CMakeFiles/
+carDetector/*.cmake
+output/
+output/
+input/
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+#*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+*.smod
+
+# Compiled Static libraries
+*.lai
+*.la
+#*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
