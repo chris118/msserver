@@ -38,5 +38,4 @@ ADD_LIBRARY(hhclient SHARED ${PROJECT_SOURCE_DIR})
 target_link_libraries(hhclient   
     protobuf
     pthread
-    sqlite3
 )

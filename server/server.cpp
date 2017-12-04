@@ -71,7 +71,7 @@ void Server::AcceptAndDispatch() {
 
 //worker thread
 void *Server::WorkThreadProc() {
-    sqlite3pp::database db("/usr/local/hhit/detection/cardetection/db/local.db");
+    sqlite3pp::database db("/usr/local/hhit/dev/cardetection/db/local.db");
 
     int packet_index = 0;
     while(1)
@@ -107,17 +107,29 @@ void *Server::WorkThreadProc() {
             cout << "alarm_vid = " << alarm_vid << endl;
             cout << "src_image = " << src_image << endl;
 
-            //alarm_image
-            std::ifstream ifs_alarm(alarm_pic);
-            if(!ifs_alarm)
-            {
-                cout << "Error open file..." << endl;
-                continue;
-            }
-            //If you really need it in a string you can initialize it the same way as the vector
-            std::string alarm_image_data = std::string(std::istreambuf_iterator<char>(ifs_alarm), std::istreambuf_iterator<char>());
-//            std::for_each(alarm_image_data.begin(), alarm_image_data.end(), [](char c) { std::cout << c; });
-            ifs_alarm.close();
+            // //alarm_image
+            // std::ifstream ifs_alarm(alarm_pic);
+            // if(!ifs_alarm)
+            // {
+            //     cout << "Error open file..." << endl;
+            //     continue;
+            // }
+            // //If you really need it in a string you can initialize it the same way as the vector
+            // std::string alarm_image_data = std::string(std::istreambuf_iterator<char>(ifs_alarm), std::istreambuf_iterator<char>());
+            // ifs_alarm.close();
+
+
+
+            FILE* f = fopen(alarm_pic.c_str(), "rb");
+            fseek(f, 0, SEEK_END);
+            size_t size = ftell(f);
+            char* cAlarm_image_data = new char[size];
+            rewind(f);
+            fread(cAlarm_image_data, sizeof(char), size, f);
+            // delete[] cAlarm_Image;
+            string strAlarm_image_data;
+            strAlarm_image_data.assign(cAlarm_image_data, size);
+            
 
             // //src_image
             // std::ifstream ifs_src(src_image);
@@ -145,11 +157,11 @@ void *Server::WorkThreadProc() {
             
             info.set_alarm_vid("");
             info.set_src_image("");
-            info.set_alarm_pic(alarm_image_data);
-            // info.set_alarm_pic("");
+            // info.set_alarm_pic(alarm_image_data);
 
+
+           info.set_alarm_pic(strAlarm_image_data);
             
-
             Server::SendToAll(packet_index, info);
             packet_index++;
 
@@ -157,6 +169,9 @@ void *Server::WorkThreadProc() {
             char sql_update[1024];
             sprintf(sql_update, "UPDATE t_alarminfo SET send = 1 WHERE id = %d", id);
             db.execute(sql_update);
+
+            //clean
+            delete[] cAlarm_image_data;
         }
         sleep(5);
     }

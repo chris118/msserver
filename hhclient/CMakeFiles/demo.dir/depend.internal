@@ -3,4 +3,4 @@
 
 CMakeFiles/demo.dir/main.cpp.o
  ./hhclient/HHClient.hpp
- /usr/local/hhit/detection/mserver/hhclient/main.cpp
+ /usr/local/hhit/dev/msserver/hhclient/main.cpp

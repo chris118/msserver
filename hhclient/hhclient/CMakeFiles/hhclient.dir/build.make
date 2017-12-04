@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /usr/local/hhit/detection/mserver/hhclient/hhclient
+CMAKE_SOURCE_DIR = /usr/local/hhit/dev/msserver/hhclient/hhclient
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /usr/local/hhit/detection/mserver/hhclient/hhclient
+CMAKE_BINARY_DIR = /usr/local/hhit/dev/msserver/hhclient/hhclient
 
 # Include any dependencies generated for this target.
 include CMakeFiles/hhclient.dir/depend.make
@@ -59,16 +59,16 @@ include CMakeFiles/hhclient.dir/flags.make
 
 CMakeFiles/hhclient.dir/HHClient.cpp.o: CMakeFiles/hhclient.dir/flags.make
 CMakeFiles/hhclient.dir/HHClient.cpp.o: HHClient.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/usr/local/hhit/detection/mserver/hhclient/hhclient/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/hhclient.dir/HHClient.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/hhclient.dir/HHClient.cpp.o -c /usr/local/hhit/detection/mserver/hhclient/hhclient/HHClient.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/usr/local/hhit/dev/msserver/hhclient/hhclient/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/hhclient.dir/HHClient.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/hhclient.dir/HHClient.cpp.o -c /usr/local/hhit/dev/msserver/hhclient/hhclient/HHClient.cpp
 
 CMakeFiles/hhclient.dir/HHClient.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/hhclient.dir/HHClient.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /usr/local/hhit/detection/mserver/hhclient/hhclient/HHClient.cpp > CMakeFiles/hhclient.dir/HHClient.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /usr/local/hhit/dev/msserver/hhclient/hhclient/HHClient.cpp > CMakeFiles/hhclient.dir/HHClient.cpp.i
 
 CMakeFiles/hhclient.dir/HHClient.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/hhclient.dir/HHClient.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /usr/local/hhit/detection/mserver/hhclient/hhclient/HHClient.cpp -o CMakeFiles/hhclient.dir/HHClient.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /usr/local/hhit/dev/msserver/hhclient/hhclient/HHClient.cpp -o CMakeFiles/hhclient.dir/HHClient.cpp.s
 
 CMakeFiles/hhclient.dir/HHClient.cpp.o.requires:
 
@@ -83,16 +83,16 @@ CMakeFiles/hhclient.dir/HHClient.cpp.o.provides.build: CMakeFiles/hhclient.dir/H
 
 CMakeFiles/hhclient.dir/protobuf/alarm.pb.cc.o: CMakeFiles/hhclient.dir/flags.make
 CMakeFiles/hhclient.dir/protobuf/alarm.pb.cc.o: protobuf/alarm.pb.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/usr/local/hhit/detection/mserver/hhclient/hhclient/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/hhclient.dir/protobuf/alarm.pb.cc.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/hhclient.dir/protobuf/alarm.pb.cc.o -c /usr/local/hhit/detection/mserver/hhclient/hhclient/protobuf/alarm.pb.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/usr/local/hhit/dev/msserver/hhclient/hhclient/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/hhclient.dir/protobuf/alarm.pb.cc.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/hhclient.dir/protobuf/alarm.pb.cc.o -c /usr/local/hhit/dev/msserver/hhclient/hhclient/protobuf/alarm.pb.cc
 
 CMakeFiles/hhclient.dir/protobuf/alarm.pb.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/hhclient.dir/protobuf/alarm.pb.cc.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /usr/local/hhit/detection/mserver/hhclient/hhclient/protobuf/alarm.pb.cc > CMakeFiles/hhclient.dir/protobuf/alarm.pb.cc.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /usr/local/hhit/dev/msserver/hhclient/hhclient/protobuf/alarm.pb.cc > CMakeFiles/hhclient.dir/protobuf/alarm.pb.cc.i
 
 CMakeFiles/hhclient.dir/protobuf/alarm.pb.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/hhclient.dir/protobuf/alarm.pb.cc.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /usr/local/hhit/detection/mserver/hhclient/hhclient/protobuf/alarm.pb.cc -o CMakeFiles/hhclient.dir/protobuf/alarm.pb.cc.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /usr/local/hhit/dev/msserver/hhclient/hhclient/protobuf/alarm.pb.cc -o CMakeFiles/hhclient.dir/protobuf/alarm.pb.cc.s
 
 CMakeFiles/hhclient.dir/protobuf/alarm.pb.cc.o.requires:
 
@@ -107,16 +107,16 @@ CMakeFiles/hhclient.dir/protobuf/alarm.pb.cc.o.provides.build: CMakeFiles/hhclie
 
 CMakeFiles/hhclient.dir/socket_base/Socket.cpp.o: CMakeFiles/hhclient.dir/flags.make
 CMakeFiles/hhclient.dir/socket_base/Socket.cpp.o: socket_base/Socket.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/usr/local/hhit/detection/mserver/hhclient/hhclient/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/hhclient.dir/socket_base/Socket.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/hhclient.dir/socket_base/Socket.cpp.o -c /usr/local/hhit/detection/mserver/hhclient/hhclient/socket_base/Socket.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/usr/local/hhit/dev/msserver/hhclient/hhclient/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/hhclient.dir/socket_base/Socket.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/hhclient.dir/socket_base/Socket.cpp.o -c /usr/local/hhit/dev/msserver/hhclient/hhclient/socket_base/Socket.cpp
 
 CMakeFiles/hhclient.dir/socket_base/Socket.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/hhclient.dir/socket_base/Socket.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /usr/local/hhit/detection/mserver/hhclient/hhclient/socket_base/Socket.cpp > CMakeFiles/hhclient.dir/socket_base/Socket.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /usr/local/hhit/dev/msserver/hhclient/hhclient/socket_base/Socket.cpp > CMakeFiles/hhclient.dir/socket_base/Socket.cpp.i
 
 CMakeFiles/hhclient.dir/socket_base/Socket.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/hhclient.dir/socket_base/Socket.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /usr/local/hhit/detection/mserver/hhclient/hhclient/socket_base/Socket.cpp -o CMakeFiles/hhclient.dir/socket_base/Socket.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /usr/local/hhit/dev/msserver/hhclient/hhclient/socket_base/Socket.cpp -o CMakeFiles/hhclient.dir/socket_base/Socket.cpp.s
 
 CMakeFiles/hhclient.dir/socket_base/Socket.cpp.o.requires:
 
@@ -131,16 +131,16 @@ CMakeFiles/hhclient.dir/socket_base/Socket.cpp.o.provides.build: CMakeFiles/hhcl
 
 CMakeFiles/hhclient.dir/core/ThreadPool.cpp.o: CMakeFiles/hhclient.dir/flags.make
 CMakeFiles/hhclient.dir/core/ThreadPool.cpp.o: core/ThreadPool.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/usr/local/hhit/detection/mserver/hhclient/hhclient/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/hhclient.dir/core/ThreadPool.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/hhclient.dir/core/ThreadPool.cpp.o -c /usr/local/hhit/detection/mserver/hhclient/hhclient/core/ThreadPool.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/usr/local/hhit/dev/msserver/hhclient/hhclient/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/hhclient.dir/core/ThreadPool.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/hhclient.dir/core/ThreadPool.cpp.o -c /usr/local/hhit/dev/msserver/hhclient/hhclient/core/ThreadPool.cpp
 
 CMakeFiles/hhclient.dir/core/ThreadPool.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/hhclient.dir/core/ThreadPool.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /usr/local/hhit/detection/mserver/hhclient/hhclient/core/ThreadPool.cpp > CMakeFiles/hhclient.dir/core/ThreadPool.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /usr/local/hhit/dev/msserver/hhclient/hhclient/core/ThreadPool.cpp > CMakeFiles/hhclient.dir/core/ThreadPool.cpp.i
 
 CMakeFiles/hhclient.dir/core/ThreadPool.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/hhclient.dir/core/ThreadPool.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /usr/local/hhit/detection/mserver/hhclient/hhclient/core/ThreadPool.cpp -o CMakeFiles/hhclient.dir/core/ThreadPool.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /usr/local/hhit/dev/msserver/hhclient/hhclient/core/ThreadPool.cpp -o CMakeFiles/hhclient.dir/core/ThreadPool.cpp.s
 
 CMakeFiles/hhclient.dir/core/ThreadPool.cpp.o.requires:
 
@@ -155,16 +155,16 @@ CMakeFiles/hhclient.dir/core/ThreadPool.cpp.o.provides.build: CMakeFiles/hhclien
 
 CMakeFiles/hhclient.dir/socket_client/ClientSocket.cpp.o: CMakeFiles/hhclient.dir/flags.make
 CMakeFiles/hhclient.dir/socket_client/ClientSocket.cpp.o: socket_client/ClientSocket.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/usr/local/hhit/detection/mserver/hhclient/hhclient/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/hhclient.dir/socket_client/ClientSocket.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/hhclient.dir/socket_client/ClientSocket.cpp.o -c /usr/local/hhit/detection/mserver/hhclient/hhclient/socket_client/ClientSocket.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/usr/local/hhit/dev/msserver/hhclient/hhclient/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/hhclient.dir/socket_client/ClientSocket.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/hhclient.dir/socket_client/ClientSocket.cpp.o -c /usr/local/hhit/dev/msserver/hhclient/hhclient/socket_client/ClientSocket.cpp
 
 CMakeFiles/hhclient.dir/socket_client/ClientSocket.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/hhclient.dir/socket_client/ClientSocket.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /usr/local/hhit/detection/mserver/hhclient/hhclient/socket_client/ClientSocket.cpp > CMakeFiles/hhclient.dir/socket_client/ClientSocket.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /usr/local/hhit/dev/msserver/hhclient/hhclient/socket_client/ClientSocket.cpp > CMakeFiles/hhclient.dir/socket_client/ClientSocket.cpp.i
 
 CMakeFiles/hhclient.dir/socket_client/ClientSocket.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/hhclient.dir/socket_client/ClientSocket.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /usr/local/hhit/detection/mserver/hhclient/hhclient/socket_client/ClientSocket.cpp -o CMakeFiles/hhclient.dir/socket_client/ClientSocket.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /usr/local/hhit/dev/msserver/hhclient/hhclient/socket_client/ClientSocket.cpp -o CMakeFiles/hhclient.dir/socket_client/ClientSocket.cpp.s
 
 CMakeFiles/hhclient.dir/socket_client/ClientSocket.cpp.o.requires:
 
@@ -195,7 +195,7 @@ libhhclient.so: CMakeFiles/hhclient.dir/core/ThreadPool.cpp.o
 libhhclient.so: CMakeFiles/hhclient.dir/socket_client/ClientSocket.cpp.o
 libhhclient.so: CMakeFiles/hhclient.dir/build.make
 libhhclient.so: CMakeFiles/hhclient.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/usr/local/hhit/detection/mserver/hhclient/hhclient/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX shared library libhhclient.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/usr/local/hhit/dev/msserver/hhclient/hhclient/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX shared library libhhclient.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/hhclient.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -216,6 +216,6 @@ CMakeFiles/hhclient.dir/clean:
 .PHONY : CMakeFiles/hhclient.dir/clean
 
 CMakeFiles/hhclient.dir/depend:
-	cd /usr/local/hhit/detection/mserver/hhclient/hhclient && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /usr/local/hhit/detection/mserver/hhclient/hhclient /usr/local/hhit/detection/mserver/hhclient/hhclient /usr/local/hhit/detection/mserver/hhclient/hhclient /usr/local/hhit/detection/mserver/hhclient/hhclient /usr/local/hhit/detection/mserver/hhclient/hhclient/CMakeFiles/hhclient.dir/DependInfo.cmake --color=$(COLOR)
+	cd /usr/local/hhit/dev/msserver/hhclient/hhclient && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /usr/local/hhit/dev/msserver/hhclient/hhclient /usr/local/hhit/dev/msserver/hhclient/hhclient /usr/local/hhit/dev/msserver/hhclient/hhclient /usr/local/hhit/dev/msserver/hhclient/hhclient /usr/local/hhit/dev/msserver/hhclient/hhclient/CMakeFiles/hhclient.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/hhclient.dir/depend
 

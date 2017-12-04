@@ -6,5 +6,5 @@ CXX_FLAGS = -fPIC   -std=c++11
 
 CXX_DEFINES = -Dhhclient_EXPORTS
 
-CXX_INCLUDES = -I/usr/local/hhit/detection/mserver/hhclient/hhclient/./core -I/usr/local/hhit/detection/mserver/hhclient/hhclient/./protobuf -I/usr/local/hhit/detection/mserver/hhclient/hhclient/./socket_base -I/usr/local/hhit/detection/mserver/hhclient/hhclient/./socket_client -I/usr/local/include -I/usr/local/cuda/include 
+CXX_INCLUDES = -I/usr/local/hhit/dev/msserver/hhclient/hhclient/./core -I/usr/local/hhit/dev/msserver/hhclient/hhclient/./protobuf -I/usr/local/hhit/dev/msserver/hhclient/hhclient/./socket_base -I/usr/local/hhit/dev/msserver/hhclient/hhclient/./socket_client -I/usr/local/include -I/usr/local/cuda/include 
 
