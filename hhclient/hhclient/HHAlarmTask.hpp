@@ -62,7 +62,7 @@ public:
                 if(messageSize > MAXRECV){
                     int left_length = messageSize;
                     int read_length = 0;
-                    const int TRUNK_SIZE = 400;
+                    const int TRUNK_SIZE = 1;
 
                     while (left_length > 0) {
                         if(left_length > TRUNK_SIZE){
@@ -89,12 +89,12 @@ public:
                 const google::protobuf::Message* prototype = google::protobuf::MessageFactory::generated_factory()->GetPrototype(descriptor);
                 google::protobuf::Message* msgProtobuf = prototype->New();
                 bool ret = msgProtobuf->ParseFromArray(protoMsgBuf, messageSize);
-                if (ret == false)
-                {
-                    cout << "Deserialize error !" << endl;
-                    sleep(2);
-                    break;
-                }
+                // if (ret == false)
+                // {
+                //     cout << "Deserialize error !" << endl;
+                //     sleep(2);
+                //     break;
+                // }
                 
                 AlarmInfo *alarm_info = static_cast<class AlarmInfo*>(msgProtobuf) ;
                 

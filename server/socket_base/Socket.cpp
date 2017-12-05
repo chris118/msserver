@@ -168,7 +168,7 @@ bool Socket::recv ( void* data, int size) const
     memset ( buf, 0, MAXRECV + 1 );
     
     //int status = ::recv ( m_sock, buf, MAXRECV, 0 );
-    int status = ::recv ( m_sock, buf, size, 0 );
+    int status = ::recv ( m_sock, buf, size,MSG_WAITALL );
 
     
     if ( status == -1 )
