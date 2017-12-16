@@ -36,7 +36,37 @@ google/protobuf/extension_set.h
 google/protobuf/unknown_field_set.h
 -
 
-./utility/HHLog.hpp
+./utility/Utility.h
+
+./utility/global.hpp
+vector
+-
+stdio.h
+-
+string.h
+-
+stdlib.h
+-
+dirent.h
+-
+sys/stat.h
+-
+unistd.h
+-
+sys/types.h
+-
+fstream
+-
+iostream
+-
+signal.h
+-
+time.h
+-
+unistd.h
+-
+
+./utility/hhlog.hpp
 stdio.h
 -
 fstream
@@ -50,21 +80,33 @@ unistd.h
 iostream
 -
 
-./utility/Utility.h
+./utility/iniFile.hpp
+string
+-
+string.h
+-
+map
+-
+vector
+-
+fstream
+-
+algorithm
+-
 
-/usr/local/hhit/dev/msserver/server/HHPacket.hpp
+/usr/local/hhit/detection/msserver/server/HHPacket.hpp
 string
 -
 stdio.h
 -
 utility/Utility.h
-/usr/local/hhit/dev/msserver/server/utility/Utility.h
+/usr/local/hhit/detection/msserver/server/utility/Utility.h
 
-/usr/local/hhit/dev/msserver/server/client.cpp
+/usr/local/hhit/detection/msserver/server/client.cpp
 client.h
-/usr/local/hhit/dev/msserver/server/client.h
+/usr/local/hhit/detection/msserver/server/client.h
 
-/usr/local/hhit/dev/msserver/server/client.h
+/usr/local/hhit/detection/msserver/server/client.h
 iostream
 -
 cstdio
@@ -72,19 +114,19 @@ cstdio
 cstdlib
 -
 socket_base/Socket.h
-/usr/local/hhit/dev/msserver/server/socket_base/Socket.h
+/usr/local/hhit/detection/msserver/server/socket_base/Socket.h
 socket_base/SocketException.h
-/usr/local/hhit/dev/msserver/server/socket_base/SocketException.h
+/usr/local/hhit/detection/msserver/server/socket_base/SocketException.h
 
-/usr/local/hhit/dev/msserver/server/db/sqlite3pp.cpp
+/usr/local/hhit/detection/msserver/server/db/sqlite3pp.cpp
 cstring
 -
 memory
 -
 sqlite3pp.h
-/usr/local/hhit/dev/msserver/server/db/sqlite3pp.h
+/usr/local/hhit/detection/msserver/server/db/sqlite3pp.h
 
-/usr/local/hhit/dev/msserver/server/db/sqlite3pp.h
+/usr/local/hhit/detection/msserver/server/db/sqlite3pp.h
 functional
 -
 iterator
@@ -98,13 +140,13 @@ string
 tuple
 -
 
-/usr/local/hhit/dev/msserver/server/db/sqlite3ppext.cpp
+/usr/local/hhit/detection/msserver/server/db/sqlite3ppext.cpp
 cstring
 -
 sqlite3ppext.h
-/usr/local/hhit/dev/msserver/server/db/sqlite3ppext.h
+/usr/local/hhit/detection/msserver/server/db/sqlite3ppext.h
 
-/usr/local/hhit/dev/msserver/server/db/sqlite3ppext.h
+/usr/local/hhit/detection/msserver/server/db/sqlite3ppext.h
 cstddef
 -
 map
@@ -118,13 +160,13 @@ type_traits
 utility
 -
 sqlite3pp.h
-/usr/local/hhit/dev/msserver/server/db/sqlite3pp.h
+/usr/local/hhit/detection/msserver/server/db/sqlite3pp.h
 
-/usr/local/hhit/dev/msserver/server/hhthread.cpp
+/usr/local/hhit/detection/msserver/server/hhthread.cpp
 hhthread.h
-/usr/local/hhit/dev/msserver/server/hhthread.h
+/usr/local/hhit/detection/msserver/server/hhthread.h
 
-/usr/local/hhit/dev/msserver/server/hhthread.h
+/usr/local/hhit/detection/msserver/server/hhthread.h
 iostream
 -
 string
@@ -136,17 +178,21 @@ unistd.h
 cstdlib
 -
 
-/usr/local/hhit/dev/msserver/server/main.cpp
+/usr/local/hhit/detection/msserver/server/main.cpp
 iostream
 -
 hhthread.h
-/usr/local/hhit/dev/msserver/server/hhthread.h
+/usr/local/hhit/detection/msserver/server/hhthread.h
 server.h
-/usr/local/hhit/dev/msserver/server/server.h
+/usr/local/hhit/detection/msserver/server/server.h
+global.hpp
+/usr/local/hhit/detection/msserver/server/global.hpp
+iniFile.hpp
+/usr/local/hhit/detection/msserver/server/iniFile.hpp
 
-/usr/local/hhit/dev/msserver/server/protobuf/alarm.pb.cc
+/usr/local/hhit/detection/msserver/server/protobuf/alarm.pb.cc
 alarm.pb.h
-/usr/local/hhit/dev/msserver/server/protobuf/alarm.pb.h
+/usr/local/hhit/detection/msserver/server/protobuf/alarm.pb.h
 algorithm
 -
 google/protobuf/stubs/common.h
@@ -166,7 +212,7 @@ google/protobuf/reflection_ops.h
 google/protobuf/wire_format.h
 -
 
-/usr/local/hhit/dev/msserver/server/protobuf/alarm.pb.h
+/usr/local/hhit/detection/msserver/server/protobuf/alarm.pb.h
 string
 -
 google/protobuf/stubs/common.h
@@ -182,13 +228,13 @@ google/protobuf/extension_set.h
 google/protobuf/unknown_field_set.h
 -
 
-/usr/local/hhit/dev/msserver/server/server.cpp
+/usr/local/hhit/detection/msserver/server/server.cpp
 server.h
-/usr/local/hhit/dev/msserver/server/server.h
+/usr/local/hhit/detection/msserver/server/server.h
 ../db/sqlite3pp.h
-/usr/local/hhit/dev/msserver/db/sqlite3pp.h
+/usr/local/hhit/detection/msserver/db/sqlite3pp.h
 
-/usr/local/hhit/dev/msserver/server/server.h
+/usr/local/hhit/detection/msserver/server/server.h
 iostream
 -
 vector
@@ -204,27 +250,29 @@ sys/socket.h
 netinet/in.h
 -
 hhthread.h
-/usr/local/hhit/dev/msserver/server/hhthread.h
+/usr/local/hhit/detection/msserver/server/hhthread.h
 client.h
-/usr/local/hhit/dev/msserver/server/client.h
-HHLog.hpp
-/usr/local/hhit/dev/msserver/server/HHLog.hpp
+/usr/local/hhit/detection/msserver/server/client.h
+hhlog.hpp
+/usr/local/hhit/detection/msserver/server/hhlog.hpp
 HHPacket.hpp
-/usr/local/hhit/dev/msserver/server/HHPacket.hpp
+/usr/local/hhit/detection/msserver/server/HHPacket.hpp
 Utility.h
-/usr/local/hhit/dev/msserver/server/Utility.h
+/usr/local/hhit/detection/msserver/server/Utility.h
+global.hpp
+/usr/local/hhit/detection/msserver/server/global.hpp
 socket_base/Socket.h
-/usr/local/hhit/dev/msserver/server/socket_base/Socket.h
+/usr/local/hhit/detection/msserver/server/socket_base/Socket.h
 socket_base/SocketException.h
-/usr/local/hhit/dev/msserver/server/socket_base/SocketException.h
+/usr/local/hhit/detection/msserver/server/socket_base/SocketException.h
 alarm.pb.h
-/usr/local/hhit/dev/msserver/server/alarm.pb.h
+/usr/local/hhit/detection/msserver/server/alarm.pb.h
 
-/usr/local/hhit/dev/msserver/server/socket_base/Socket.cpp
+/usr/local/hhit/detection/msserver/server/socket_base/Socket.cpp
 Socket.h
-/usr/local/hhit/dev/msserver/server/socket_base/Socket.h
+/usr/local/hhit/detection/msserver/server/socket_base/Socket.h
 string.h
-/usr/local/hhit/dev/msserver/server/socket_base/string.h
+/usr/local/hhit/detection/msserver/server/socket_base/string.h
 string.h
 -
 errno.h
@@ -234,7 +282,7 @@ fcntl.h
 iostream
 -
 
-/usr/local/hhit/dev/msserver/server/socket_base/Socket.h
+/usr/local/hhit/detection/msserver/server/socket_base/Socket.h
 sys/types.h
 -
 sys/socket.h
@@ -250,11 +298,11 @@ string
 arpa/inet.h
 -
 
-/usr/local/hhit/dev/msserver/server/socket_base/SocketException.h
+/usr/local/hhit/detection/msserver/server/socket_base/SocketException.h
 string
 -
 
-/usr/local/hhit/dev/msserver/server/utility/Utility.cpp
+/usr/local/hhit/detection/msserver/server/utility/Utility.cpp
 iostream
 -
 stdio.h
@@ -262,9 +310,9 @@ stdio.h
 stdlib.h
 -
 Utility.h
-/usr/local/hhit/dev/msserver/server/utility/Utility.h
+/usr/local/hhit/detection/msserver/server/utility/Utility.h
 
-/usr/local/hhit/dev/msserver/server/utility/Utility.h
+/usr/local/hhit/detection/msserver/server/utility/Utility.h
 
 /usr/local/include/sqlite3.h
 stdarg.h

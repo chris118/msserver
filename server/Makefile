@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /usr/local/hhit/dev/msserver/server
+CMAKE_SOURCE_DIR = /usr/local/hhit/detection/msserver/server
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /usr/local/hhit/dev/msserver/server
+CMAKE_BINARY_DIR = /usr/local/hhit/detection/msserver/server
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /usr/local/hhit/dev/msserver/server/CMakeFiles /usr/local/hhit/dev/msserver/server/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /usr/local/hhit/detection/msserver/server/CMakeFiles /usr/local/hhit/detection/msserver/server/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /usr/local/hhit/dev/msserver/server/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /usr/local/hhit/detection/msserver/server/CMakeFiles 0
 .PHONY : all
 
 # The main clean target

@@ -19,8 +19,10 @@ CMakeFiles/server.dir/hhthread.cpp.o: hhthread.cpp
 CMakeFiles/server.dir/hhthread.cpp.o: hhthread.h
 
 CMakeFiles/server.dir/main.cpp.o: ./protobuf/alarm.pb.h
-CMakeFiles/server.dir/main.cpp.o: ./utility/HHLog.hpp
 CMakeFiles/server.dir/main.cpp.o: ./utility/Utility.h
+CMakeFiles/server.dir/main.cpp.o: ./utility/global.hpp
+CMakeFiles/server.dir/main.cpp.o: ./utility/hhlog.hpp
+CMakeFiles/server.dir/main.cpp.o: ./utility/iniFile.hpp
 CMakeFiles/server.dir/main.cpp.o: HHPacket.hpp
 CMakeFiles/server.dir/main.cpp.o: client.h
 CMakeFiles/server.dir/main.cpp.o: hhthread.h
@@ -35,8 +37,9 @@ CMakeFiles/server.dir/protobuf/alarm.pb.cc.o: protobuf/alarm.pb.h
 
 CMakeFiles/server.dir/server.cpp.o: ./db/sqlite3pp.h
 CMakeFiles/server.dir/server.cpp.o: ./protobuf/alarm.pb.h
-CMakeFiles/server.dir/server.cpp.o: ./utility/HHLog.hpp
 CMakeFiles/server.dir/server.cpp.o: ./utility/Utility.h
+CMakeFiles/server.dir/server.cpp.o: ./utility/global.hpp
+CMakeFiles/server.dir/server.cpp.o: ./utility/hhlog.hpp
 CMakeFiles/server.dir/server.cpp.o: HHPacket.hpp
 CMakeFiles/server.dir/server.cpp.o: client.h
 CMakeFiles/server.dir/server.cpp.o: hhthread.h

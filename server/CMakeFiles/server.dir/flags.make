@@ -6,5 +6,5 @@ CXX_FLAGS =   -std=c++11
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/usr/local/hhit/dev/msserver/server/./protobuf -I/usr/local/hhit/dev/msserver/server/./socket_base -I/usr/local/hhit/dev/msserver/server/./utility -I/usr/local/hhit/dev/msserver/server/./db -I/usr/local/include 
+CXX_INCLUDES = -I/usr/local/hhit/detection/msserver/server/./protobuf -I/usr/local/hhit/detection/msserver/server/./socket_base -I/usr/local/hhit/detection/msserver/server/./utility -I/usr/local/hhit/detection/msserver/server/./db -I/usr/local/include 
 

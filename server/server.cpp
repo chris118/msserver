@@ -6,7 +6,8 @@ using namespace std;
 //Actually allocate clients
 vector<Client> Server::clients;
 
-Server::Server() {
+Server::Server(Config config) {
+    m_config = config;
     
     //Initialize static mutex from HHThread
     HHThread::InitMutex();
@@ -18,7 +19,7 @@ Server::Server() {
             throw SocketException ( "Could not create server socket." );
         }
         
-        if ( ! serverSock.bind(PORT))
+        if ( ! serverSock.bind(m_config.port))
         {
             throw SocketException ( "Could not bind to port." );
         }
@@ -34,6 +35,10 @@ Server::Server() {
     }
 }
 
+Config Server::getConfig(){
+    return m_config;
+}
+
 /*
 	AcceptAndDispatch();
  
@@ -45,7 +50,7 @@ void Server::AcceptAndDispatch() {
     
     //开启工作线程
     HHThread *worker_thread = new HHThread();
-    worker_thread->Create((void *) Server::WorkThreadProc, NULL);
+    worker_thread->Create((void *) Server::WorkThreadProc, this);
     
     
     Client *client;
@@ -70,8 +75,10 @@ void Server::AcceptAndDispatch() {
 }
 
 //worker thread
-void *Server::WorkThreadProc() {
-    sqlite3pp::database db("/usr/local/hhit/dev/cardetection/db/local.db");
+void *Server::WorkThreadProc(void *args) {
+    Server *server = (Server* )args;
+
+    sqlite3pp::database db(server->getConfig().db_path.c_str());
     db.set_busy_timeout(1000*15);
 
     int packet_index = 0;
