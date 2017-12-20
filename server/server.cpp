@@ -16,22 +16,25 @@ Server::Server(Config config) {
         // Create the socket
         if ( ! serverSock.create() )
         {
+            HHLOG("Could not create server socket.");
             throw SocketException ( "Could not create server socket." );
         }
         
         if ( ! serverSock.bind(m_config.port))
         {
+            HHLOG("Could not bind to port.");
             throw SocketException ( "Could not bind to port." );
         }
         
         if ( ! serverSock.listen() )
         {
+            HHLOG("Could not listen to socket.");
             throw SocketException ( "Could not listen to socket." );
         }
     }
     catch ( SocketException& e )
     {
-        LOG2("Exception was caught: %s \nExiting.\n", e.description());
+        HHLOG2("Exception was caught: %s \nExiting.\n", e.description());
     }
 }
 
@@ -52,7 +55,6 @@ void Server::AcceptAndDispatch() {
     HHThread *worker_thread = new HHThread();
     worker_thread->Create((void *) Server::WorkThreadProc, this);
     
-    
     Client *client;
     HHThread *client_thread;
 
@@ -61,17 +63,126 @@ void Server::AcceptAndDispatch() {
         client = new Client();
         client_thread = new HHThread();
         
-        //Blocks here;
-        
+        //block here waiting for client;
         bool ret = serverSock.accept(client->sock);
         
         if(ret == false) {
-            LOG("Error on accept");
+            HHLOG("Error on accept");
+            exit(0);
         }
         else {
             client_thread->Create((void *) Server::HandleClient, client);
         }
     }
+}
+
+//client thread
+void *Server::HandleClient(void *args) {
+    //Pointer to accept()'ed Client
+    Client *client = (Client *) args;
+    char buffer[256-25];
+    int index;
+    int n;
+    
+    //Add client in Static clients <vector> (Critical section!)
+    HHThread::LockMutex((const char *) client->name);
+    
+    //Before adding the new client, calculate its id. (Now we have the lock)
+    client->SetId((int)Server::clients.size());
+    sprintf(buffer, "Client n.%d", client->id);
+    client->SetName(buffer);
+    cout << "Adding client with id: " << client->id << endl;
+    Server::clients.push_back(*client);
+    
+    HHThread::UnlockMutex((const char *) client->name);
+    
+    while(1)
+    {
+        memset(buffer, 0, sizeof buffer);
+        n = client->sock.recv(buffer, sizeof buffer);
+
+        //Client disconnected?
+        if(n == 0) {
+            cout << "Client " << client->name << " diconnected" << endl;
+            //      close(c->sock);
+            client->sock.close();
+
+            //Remove client in Static clients <vector> (Critical section!)
+            HHThread::LockMutex((const char *) client->name);
+
+            index = Server::FindClientIndex(client);
+            cout << "Erasing user in position " << index << " whose name id is: "
+            << Server::clients[index].id << endl;
+            Server::clients.erase(Server::clients.begin() + index);
+
+            HHThread::UnlockMutex((const char *) client->name);
+
+            break;
+        }
+        else if(n < 0) {
+            HHLOG2("Error while receiving message from client: %s", client->name);
+        }
+    }
+    
+    //End thread
+    return NULL;
+}
+
+bool Server::SendPacket(Client &client, int packet_index,
+                        google::protobuf::Message &msg, HHHeader header){
+
+    int headerSize = sizeof(HHHeader);
+    int msgSize= msg.ByteSize();
+    int packetSize = headerSize + msgSize;
+    
+    cout << " send to:" << "Client " << client.name << endl;
+    cout << "packetSize: " << packetSize << endl;
+    cout << "msgSize: " << msgSize << endl;
+
+    char msgBuff[msgSize];
+    msg.SerializeToArray(msgBuff,msgSize);
+   
+    // packet
+    char packetBuff[packetSize];
+    //头信息
+    memcpy(packetBuff, &header, headerSize);
+    //msg 信息
+    memcpy(packetBuff + headerSize, msgBuff, msgSize);
+    
+    //TODO: 分小块发送
+    if(!client.sock.is_valid()){
+        HHLOG("invalid client socket >>>>>>");
+    }else {
+        bool ret = client.sock.send(packetBuff, packetSize);
+        if(!ret){
+            cout << "socket send error !" << endl;
+            return false;
+        }
+    }
+
+    return true;
+}
+
+void Server::SendToAll(int packet_index, AlarmInfo info) {
+    //Acquire the lock
+    HHThread::LockMutex("'SendToAll()'");
+    HHPRINT("SendToAll");
+    HHPRINT2("total client number ", clients.size());
+    for(size_t i=0; i<clients.size(); i++) {
+        HHHeader header;
+        header.flag = 0xffff;
+        header.seq = packet_index;
+        header.msg_length = info.ByteSize();//Message的字节数
+        header.type = 1;
+        header.reserved = 0;
+
+        SendPacket(clients[i], packet_index, info, header);
+
+        sleep(1);
+    }
+    
+    //Release the lock
+    HHThread::UnlockMutex("'SendToAll()'");
 }
 
 //worker thread
@@ -125,9 +236,6 @@ void *Server::WorkThreadProc(void *args) {
             //If you really need it in a string you can initialize it the same way as the vector
             std::string alarm_image_data = std::string(std::istreambuf_iterator<char>(ifs_alarm), std::istreambuf_iterator<char>());
             ifs_alarm.close();
-
-
-
             // FILE* f = fopen(alarm_pic.c_str(), "rb");
             // fseek(f, 0, SEEK_END);
             // size_t size = ftell(f);
@@ -138,18 +246,7 @@ void *Server::WorkThreadProc(void *args) {
             // string strAlarm_image_data;
             // strAlarm_image_data.assign(cAlarm_image_data, size);
             // cout << "image size: " << size << endl;
-            
 
-            // //src_image
-            // std::ifstream ifs_src(src_image);
-            // if(!ifs_src)
-            // {
-            //     cout << "Error open file..." << endl;
-            //     continue;
-            // }
-            // //If you really need it in a string you can initialize it the same way as the vector
-            // std::string src_image_data = std::string(std::istreambuf_iterator<char>(ifs_src), std::istreambuf_iterator<char>());
-            // ifs_src.close();
             
             // send alarm
             AlarmInfo info;
@@ -167,11 +264,7 @@ void *Server::WorkThreadProc(void *args) {
             info.set_alarm_vid("");
             info.set_src_image("");
             info.set_alarm_pic(alarm_image_data);
-
-        //    info.set_alarm_pic(strAlarm_image_data);
             
-            cout << "send msg!" << endl;
-
             Server::SendToAll(packet_index, info);
             packet_index++;
 
@@ -179,122 +272,11 @@ void *Server::WorkThreadProc(void *args) {
             char sql_update[1024];
             sprintf(sql_update, "UPDATE t_alarminfo SET send = 1 WHERE id = %d", id);
             db.execute(sql_update);
-
-            //clean
-            // delete[] cAlarm_image_data;
         }
-
         sleep(1);
     }
-    
     //End thread
     return NULL;
-}
-
-
-//client thread
-void *Server::HandleClient(void *args) {
-    
-    //Pointer to accept()'ed Client
-    Client *client = (Client *) args;
-    char buffer[256-25];
-    int index;
-    int n;
-    
-    //Add client in Static clients <vector> (Critical section!)
-    HHThread::LockMutex((const char *) client->name);
-    
-    //Before adding the new client, calculate its id. (Now we have the lock)
-    client->SetId((int)Server::clients.size());
-    sprintf(buffer, "Client n.%d", client->id);
-    client->SetName(buffer);
-    cout << "Adding client with id: " << client->id << endl;
-    Server::clients.push_back(*client);
-    
-    HHThread::UnlockMutex((const char *) client->name);
-    
-    while(1)
-    {
-        memset(buffer, 0, sizeof buffer);
-        n = client->sock.recv(buffer, sizeof buffer);
-
-        //Client disconnected?
-        if(n == 0) {
-            cout << "Client " << client->name << " diconnected" << endl;
-            //      close(c->sock);
-            client->sock.close();
-
-            //Remove client in Static clients <vector> (Critical section!)
-            HHThread::LockMutex((const char *) client->name);
-
-            index = Server::FindClientIndex(client);
-            cout << "Erasing user in position " << index << " whose name id is: "
-            << Server::clients[index].id << endl;
-            Server::clients.erase(Server::clients.begin() + index);
-
-            HHThread::UnlockMutex((const char *) client->name);
-
-            break;
-        }
-        else if(n < 0) {
-            LOG2("Error while receiving message from client: %s", client->name);
-        }
-    }
-    
-    //End thread
-    return NULL;
-}
-
-bool Server::SendPacket(Client &client, int packet_index,
-                        google::protobuf::Message &msg, HHHeader header){
-    
-    int headerSize = sizeof(HHHeader);
-    int msgSize= msg.ByteSize();
-    int packetSize = headerSize + msgSize;
-    
-    cout << "packetSize: " << packetSize << endl;
-    cout << "msgSize: " << msgSize << endl;
-
-    char msgBuff[msgSize];
-    msg.SerializeToArray(msgBuff,msgSize);
-   
-    // packet
-    char packetBuff[packetSize];
-    //头信息
-    memcpy(packetBuff, &header, headerSize);
-    //msg 信息
-    memcpy(packetBuff + headerSize, msgBuff, msgSize);
-    
-    //TODO: 分小块发送
-    bool ret = client.sock.send(packetBuff, packetSize);
-    if(!ret){
-        cout << "socket send error !" << endl;
-        return false;
-    }
-    return true;
-}
-
-void Server::SendToAll(int packet_index, AlarmInfo info) {
-    
-    //Acquire the lock
-    HHThread::LockMutex("'SendToAll()'");
-    
-    for(size_t i=0; i<clients.size(); i++) {
-        
-        cout << " send to:" << "Client " << clients[i].name << endl;
-        
-        HHHeader header;
-        header.flag = 0xffff;
-        header.seq = packet_index;
-        header.msg_length = info.ByteSize();//Message的字节数
-        header.type = 1;
-        header.reserved = 0;
-
-        SendPacket(clients[i], packet_index, info, header);
-    }
-    
-    //Release the lock
-    HHThread::UnlockMutex("'SendToAll()'");
 }
 
 void Server::ListClients() {
@@ -310,54 +292,6 @@ int Server::FindClientIndex(Client *c) {
     for(size_t i=0; i<clients.size(); i++) {
         if((Server::clients[i].id) == c->id) return (int) i;
     }
-    LOG("Client id not found.");
+    HHLOG("Client id not found.");
     return -1;
 }
-
-
-
-
-
-//        //Message received. Send to all clients.
-//        snprintf(message, sizeof message, "<%s>: %s", client->name, buffer);
-//        cout << "Will send to all: " << message << endl;
-//
-//        Server::SendToAll(packet_index);
-
-
-
-//        memset(buffer, 0, sizeof buffer);
-//        n = client->sock.recv(buffer, sizeof buffer);
-//
-//        //Client disconnected?
-//        if(n == 0) {
-//            cout << "Client " << client->name << " diconnected" << endl;
-//            //      close(c->sock);
-//            client->sock.close();
-//
-//            //Remove client in Static clients <vector> (Critical section!)
-//            HHThread::LockMutex((const char *) client->name);
-//
-//            index = Server::FindClientIndex(client);
-//            cout << "Erasing user in position " << index << " whose name id is: "
-//            << Server::clients[index].id << endl;
-//            Server::clients.erase(Server::clients.begin() + index);
-//
-//            HHThread::UnlockMutex((const char *) client->name);
-//
-//            break;
-//        }
-//        else if(n < 0) {
-//            LOG2("Error while receiving message from client: %s", client->name);
-//        }
-//        else {
-//            //Message received. Send to all clients.
-//            snprintf(message, sizeof message, "<%s>: %s", client->name, buffer);
-//            cout << "Will send to all: " << message << endl;
-//
-//            Server::SendToAll(packet_index);
-//        }
-
-//        packet_index++;
-
-//        sleep(2);

@@ -125,6 +125,7 @@ bool Socket::send ( void* data, int size) const{
     int status = ::send ( m_sock, data, size, MSG_NOSIGNAL );
     if ( status == -1 )
     {
+        std::cout << "status == -1   errno == " << errno << "  in Socket::send\n";
         return false;
     }
     else
@@ -210,6 +211,7 @@ bool Socket::connect ( const std::string host, const int port )
 
 void Socket::close()
 {
+    std::cout << "socket close >>>>>>>>>>" << std::endl;
     ::close(m_sock);
 }
 
