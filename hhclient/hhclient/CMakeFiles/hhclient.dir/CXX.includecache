@@ -22,7 +22,7 @@ google/protobuf/extension_set.h
 google/protobuf/unknown_field_set.h
 -
 
-/usr/local/hhit/dev/msserver/hhclient/hhclient/HHAlarmTask.hpp
+/usr/local/hhit/detection/msserver/hhclient/hhclient/HHAlarmTask.hpp
 iostream
 -
 stdio.h
@@ -46,41 +46,41 @@ signal.h
 sys/syscall.h
 -
 core/ThreadPool.h
-/usr/local/hhit/dev/msserver/hhclient/hhclient/core/ThreadPool.h
+/usr/local/hhit/detection/msserver/hhclient/hhclient/core/ThreadPool.h
 core/HHLog.hpp
-/usr/local/hhit/dev/msserver/hhclient/hhclient/core/HHLog.hpp
+/usr/local/hhit/detection/msserver/hhclient/hhclient/core/HHLog.hpp
 core/HHLog.hpp
-/usr/local/hhit/dev/msserver/hhclient/hhclient/core/HHLog.hpp
+/usr/local/hhit/detection/msserver/hhclient/hhclient/core/HHLog.hpp
 core/Util.hpp
-/usr/local/hhit/dev/msserver/hhclient/hhclient/core/Util.hpp
+/usr/local/hhit/detection/msserver/hhclient/hhclient/core/Util.hpp
 socket_base/Socket.h
-/usr/local/hhit/dev/msserver/hhclient/hhclient/socket_base/Socket.h
+/usr/local/hhit/detection/msserver/hhclient/hhclient/socket_base/Socket.h
 socket_base/SocketException.h
-/usr/local/hhit/dev/msserver/hhclient/hhclient/socket_base/SocketException.h
+/usr/local/hhit/detection/msserver/hhclient/hhclient/socket_base/SocketException.h
 socket_client/ClientSocket.h
-/usr/local/hhit/dev/msserver/hhclient/hhclient/socket_client/ClientSocket.h
+/usr/local/hhit/detection/msserver/hhclient/hhclient/socket_client/ClientSocket.h
 socket_client/hhpacket.hpp
-/usr/local/hhit/dev/msserver/hhclient/hhclient/socket_client/hhpacket.hpp
+/usr/local/hhit/detection/msserver/hhclient/hhclient/socket_client/hhpacket.hpp
 socket_client/hhmessagehandle.hpp
-/usr/local/hhit/dev/msserver/hhclient/hhclient/socket_client/hhmessagehandle.hpp
+/usr/local/hhit/detection/msserver/hhclient/hhclient/socket_client/hhmessagehandle.hpp
 alarm.pb.h
-/usr/local/hhit/dev/msserver/hhclient/hhclient/alarm.pb.h
+/usr/local/hhit/detection/msserver/hhclient/hhclient/alarm.pb.h
 
-/usr/local/hhit/dev/msserver/hhclient/hhclient/HHClient.cpp
+/usr/local/hhit/detection/msserver/hhclient/hhclient/HHClient.cpp
 stdio.h
 -
 HHClient.hpp
-/usr/local/hhit/dev/msserver/hhclient/hhclient/HHClient.hpp
+/usr/local/hhit/detection/msserver/hhclient/hhclient/HHClient.hpp
 HHClientImpl.hpp
-/usr/local/hhit/dev/msserver/hhclient/hhclient/HHClientImpl.hpp
+/usr/local/hhit/detection/msserver/hhclient/hhclient/HHClientImpl.hpp
 
-/usr/local/hhit/dev/msserver/hhclient/hhclient/HHClient.hpp
+/usr/local/hhit/detection/msserver/hhclient/hhclient/HHClient.hpp
 string
 -
 vector
 -
 
-/usr/local/hhit/dev/msserver/hhclient/hhclient/HHClientImpl.hpp
+/usr/local/hhit/detection/msserver/hhclient/hhclient/HHClientImpl.hpp
 stdio.h
 -
 string.h
@@ -106,13 +106,13 @@ time.h
 unistd.h
 -
 HHClient.hpp
-/usr/local/hhit/dev/msserver/hhclient/hhclient/HHClient.hpp
+/usr/local/hhit/detection/msserver/hhclient/hhclient/HHClient.hpp
 core/ThreadPool.h
-/usr/local/hhit/dev/msserver/hhclient/hhclient/core/ThreadPool.h
+/usr/local/hhit/detection/msserver/hhclient/hhclient/core/ThreadPool.h
 HHAlarmTask.hpp
-/usr/local/hhit/dev/msserver/hhclient/hhclient/HHAlarmTask.hpp
+/usr/local/hhit/detection/msserver/hhclient/hhclient/HHAlarmTask.hpp
 
-/usr/local/hhit/dev/msserver/hhclient/hhclient/core/HHLog.hpp
+/usr/local/hhit/detection/msserver/hhclient/hhclient/core/HHLog.hpp
 stdio.h
 -
 fstream
@@ -130,9 +130,9 @@ time.h
 sys/timeb.h
 -
 
-/usr/local/hhit/dev/msserver/hhclient/hhclient/core/ThreadPool.cpp
+/usr/local/hhit/detection/msserver/hhclient/hhclient/core/ThreadPool.cpp
 ThreadPool.h
-/usr/local/hhit/dev/msserver/hhclient/hhclient/core/ThreadPool.h
+/usr/local/hhit/detection/msserver/hhclient/hhclient/core/ThreadPool.h
 stdio.h
 -
 assert.h
@@ -140,7 +140,7 @@ assert.h
 stdlib.h
 -
 
-/usr/local/hhit/dev/msserver/hhclient/hhclient/core/ThreadPool.h
+/usr/local/hhit/detection/msserver/hhclient/hhclient/core/ThreadPool.h
 deque
 -
 string
@@ -152,7 +152,7 @@ string.h
 stdlib.h
 -
 
-/usr/local/hhit/dev/msserver/hhclient/hhclient/core/Util.hpp
+/usr/local/hhit/detection/msserver/hhclient/hhclient/core/Util.hpp
 stdio.h
 -
 string.h
@@ -184,9 +184,9 @@ ctime
 sys/timeb.h
 -
 
-/usr/local/hhit/dev/msserver/hhclient/hhclient/protobuf/alarm.pb.cc
+/usr/local/hhit/detection/msserver/hhclient/hhclient/protobuf/alarm.pb.cc
 alarm.pb.h
-/usr/local/hhit/dev/msserver/hhclient/hhclient/protobuf/alarm.pb.h
+/usr/local/hhit/detection/msserver/hhclient/hhclient/protobuf/alarm.pb.h
 algorithm
 -
 google/protobuf/stubs/common.h
@@ -206,7 +206,7 @@ google/protobuf/reflection_ops.h
 google/protobuf/wire_format.h
 -
 
-/usr/local/hhit/dev/msserver/hhclient/hhclient/protobuf/alarm.pb.h
+/usr/local/hhit/detection/msserver/hhclient/hhclient/protobuf/alarm.pb.h
 string
 -
 google/protobuf/stubs/common.h
@@ -222,11 +222,11 @@ google/protobuf/extension_set.h
 google/protobuf/unknown_field_set.h
 -
 
-/usr/local/hhit/dev/msserver/hhclient/hhclient/socket_base/Socket.cpp
+/usr/local/hhit/detection/msserver/hhclient/hhclient/socket_base/Socket.cpp
 Socket.h
-/usr/local/hhit/dev/msserver/hhclient/hhclient/socket_base/Socket.h
+/usr/local/hhit/detection/msserver/hhclient/hhclient/socket_base/Socket.h
 string.h
-/usr/local/hhit/dev/msserver/hhclient/hhclient/socket_base/string.h
+/usr/local/hhit/detection/msserver/hhclient/hhclient/socket_base/string.h
 string.h
 -
 errno.h
@@ -236,7 +236,7 @@ fcntl.h
 iostream
 -
 
-/usr/local/hhit/dev/msserver/hhclient/hhclient/socket_base/Socket.h
+/usr/local/hhit/detection/msserver/hhclient/hhclient/socket_base/Socket.h
 sys/types.h
 -
 sys/socket.h
@@ -252,13 +252,13 @@ string
 arpa/inet.h
 -
 
-/usr/local/hhit/dev/msserver/hhclient/hhclient/socket_base/SocketException.h
+/usr/local/hhit/detection/msserver/hhclient/hhclient/socket_base/SocketException.h
 string
 -
 
-/usr/local/hhit/dev/msserver/hhclient/hhclient/socket_client/ClientSocket.cpp
+/usr/local/hhit/detection/msserver/hhclient/hhclient/socket_client/ClientSocket.cpp
 ClientSocket.h
-/usr/local/hhit/dev/msserver/hhclient/hhclient/socket_client/ClientSocket.h
+/usr/local/hhit/detection/msserver/hhclient/hhclient/socket_client/ClientSocket.h
 iostream
 -
 stdio.h
@@ -270,13 +270,13 @@ string.h
 arpa/inet.h
 -
 
-/usr/local/hhit/dev/msserver/hhclient/hhclient/socket_client/ClientSocket.h
+/usr/local/hhit/detection/msserver/hhclient/hhclient/socket_client/ClientSocket.h
 ../socket_base/Socket.h
-/usr/local/hhit/dev/msserver/hhclient/hhclient/socket_base/Socket.h
+/usr/local/hhit/detection/msserver/hhclient/hhclient/socket_base/Socket.h
 ../socket_base/SocketException.h
-/usr/local/hhit/dev/msserver/hhclient/hhclient/socket_base/SocketException.h
+/usr/local/hhit/detection/msserver/hhclient/hhclient/socket_base/SocketException.h
 
-/usr/local/hhit/dev/msserver/hhclient/hhclient/socket_client/hhmessagehandle.hpp
+/usr/local/hhit/detection/msserver/hhclient/hhclient/socket_client/hhmessagehandle.hpp
 string
 -
 iostream
@@ -286,13 +286,13 @@ assert.h
 stdint.h
 -
 alarm.pb.h
-/usr/local/hhit/dev/msserver/hhclient/hhclient/socket_client/alarm.pb.h
+/usr/local/hhit/detection/msserver/hhclient/hhclient/socket_client/alarm.pb.h
 
-/usr/local/hhit/dev/msserver/hhclient/hhclient/socket_client/hhpacket.hpp
+/usr/local/hhit/detection/msserver/hhclient/hhclient/socket_client/hhpacket.hpp
 string
 -
 stdio.h
 -
 ../core/Util.hpp
-/usr/local/hhit/dev/msserver/hhclient/hhclient/core/Util.hpp
+/usr/local/hhit/detection/msserver/hhclient/hhclient/core/Util.hpp
 

@@ -6,5 +6,5 @@ CXX_FLAGS =
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/usr/local/hhit/dev/msserver/hhclient/./hhclient 
+CXX_INCLUDES = -I/usr/local/hhit/detection/msserver/hhclient/./hhclient 
 

@@ -32,7 +32,7 @@ void protobuf_AssignDesc_alarm_2eproto() {
       "alarm.proto");
   GOOGLE_CHECK(file != NULL);
   AlarmInfo_descriptor_ = file->message_type(0);
-  static const int AlarmInfo_offsets_[13] = {
+  static const int AlarmInfo_offsets_[16] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(AlarmInfo, id_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(AlarmInfo, obj_type_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(AlarmInfo, timestamp_),
@@ -46,6 +46,9 @@ void protobuf_AssignDesc_alarm_2eproto() {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(AlarmInfo, src_image_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(AlarmInfo, alarm_pic_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(AlarmInfo, alarm_vid_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(AlarmInfo, image_width_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(AlarmInfo, image_height_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(AlarmInfo, image_id_),
   };
   AlarmInfo_reflection_ =
     new ::google::protobuf::internal::GeneratedMessageReflection(
@@ -88,13 +91,14 @@ void protobuf_AddDesc_alarm_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-    "\n\013alarm.proto\"\346\001\n\tAlarmInfo\022\n\n\002id\030\001 \002(\005\022"
+    "\n\013alarm.proto\"\243\002\n\tAlarmInfo\022\n\n\002id\030\001 \002(\005\022"
     "\020\n\010obj_type\030\002 \002(\005\022\021\n\ttimestamp\030\003 \002(\005\022\t\n\001"
     "x\030\004 \002(\005\022\t\n\001y\030\005 \002(\005\022\t\n\001w\030\006 \002(\005\022\t\n\001h\030\007 \002(\005"
     "\022\027\n\017start_timestamp\030\010 \002(\005\022\025\n\rend_timesta"
     "mp\030\t \002(\005\022\023\n\013credibility\030\n \002(\002\022\021\n\tsrc_ima"
     "ge\030\013 \001(\014\022\021\n\talarm_pic\030\014 \001(\014\022\021\n\talarm_vid"
-    "\030\r \001(\014", 246);
+    "\030\r \001(\014\022\023\n\013image_width\030\016 \002(\005\022\024\n\014image_hei"
+    "ght\030\017 \002(\005\022\020\n\010image_id\030\020 \002(\005", 307);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "alarm.proto", &protobuf_RegisterTypes);
   AlarmInfo::default_instance_ = new AlarmInfo();
@@ -125,6 +129,9 @@ const int AlarmInfo::kCredibilityFieldNumber;
 const int AlarmInfo::kSrcImageFieldNumber;
 const int AlarmInfo::kAlarmPicFieldNumber;
 const int AlarmInfo::kAlarmVidFieldNumber;
+const int AlarmInfo::kImageWidthFieldNumber;
+const int AlarmInfo::kImageHeightFieldNumber;
+const int AlarmInfo::kImageIdFieldNumber;
 #endif  // !_MSC_VER
 
 AlarmInfo::AlarmInfo()
@@ -159,6 +166,9 @@ void AlarmInfo::SharedCtor() {
   src_image_ = const_cast< ::std::string*>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   alarm_pic_ = const_cast< ::std::string*>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   alarm_vid_ = const_cast< ::std::string*>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  image_width_ = 0;
+  image_height_ = 0;
+  image_id_ = 0;
   ::memset(_has_bits_, 0, sizeof(_has_bits_));
 }
 
@@ -216,8 +226,9 @@ void AlarmInfo::Clear() {
   if (_has_bits_[0 / 32] & 255) {
     ZR_(id_, start_timestamp_);
   }
-  if (_has_bits_[8 / 32] & 7936) {
+  if (_has_bits_[8 / 32] & 65280) {
     ZR_(end_timestamp_, credibility_);
+    ZR_(image_width_, image_id_);
     if (has_src_image()) {
       if (src_image_ != &::google::protobuf::internal::GetEmptyStringAlreadyInited()) {
         src_image_->clear();
@@ -248,7 +259,7 @@ bool AlarmInfo::MergePartialFromCodedStream(
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:AlarmInfo)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(127);
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(16383);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
@@ -436,6 +447,51 @@ bool AlarmInfo::MergePartialFromCodedStream(
         } else {
           goto handle_unusual;
         }
+        if (input->ExpectTag(112)) goto parse_image_width;
+        break;
+      }
+
+      // required int32 image_width = 14;
+      case 14: {
+        if (tag == 112) {
+         parse_image_width:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
+                 input, &image_width_)));
+          set_has_image_width();
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectTag(120)) goto parse_image_height;
+        break;
+      }
+
+      // required int32 image_height = 15;
+      case 15: {
+        if (tag == 120) {
+         parse_image_height:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
+                 input, &image_height_)));
+          set_has_image_height();
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectTag(128)) goto parse_image_id;
+        break;
+      }
+
+      // required int32 image_id = 16;
+      case 16: {
+        if (tag == 128) {
+         parse_image_id:
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
+                 input, &image_id_)));
+          set_has_image_id();
+        } else {
+          goto handle_unusual;
+        }
         if (input->ExpectAtEnd()) goto success;
         break;
       }
@@ -533,6 +589,21 @@ void AlarmInfo::SerializeWithCachedSizes(
       13, this->alarm_vid(), output);
   }
 
+  // required int32 image_width = 14;
+  if (has_image_width()) {
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(14, this->image_width(), output);
+  }
+
+  // required int32 image_height = 15;
+  if (has_image_height()) {
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(15, this->image_height(), output);
+  }
+
+  // required int32 image_id = 16;
+  if (has_image_id()) {
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(16, this->image_id(), output);
+  }
+
   if (!unknown_fields().empty()) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
         unknown_fields(), output);
@@ -612,6 +683,21 @@ void AlarmInfo::SerializeWithCachedSizes(
     target =
       ::google::protobuf::internal::WireFormatLite::WriteBytesToArray(
         13, this->alarm_vid(), target);
+  }
+
+  // required int32 image_width = 14;
+  if (has_image_width()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(14, this->image_width(), target);
+  }
+
+  // required int32 image_height = 15;
+  if (has_image_height()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(15, this->image_height(), target);
+  }
+
+  // required int32 image_id = 16;
+  if (has_image_id()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(16, this->image_id(), target);
   }
 
   if (!unknown_fields().empty()) {
@@ -717,6 +803,27 @@ int AlarmInfo::ByteSize() const {
           this->alarm_vid());
     }
 
+    // required int32 image_width = 14;
+    if (has_image_width()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::Int32Size(
+          this->image_width());
+    }
+
+    // required int32 image_height = 15;
+    if (has_image_height()) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::Int32Size(
+          this->image_height());
+    }
+
+    // required int32 image_id = 16;
+    if (has_image_id()) {
+      total_size += 2 +
+        ::google::protobuf::internal::WireFormatLite::Int32Size(
+          this->image_id());
+    }
+
   }
   if (!unknown_fields().empty()) {
     total_size +=
@@ -785,6 +892,15 @@ void AlarmInfo::MergeFrom(const AlarmInfo& from) {
     if (from.has_alarm_vid()) {
       set_alarm_vid(from.alarm_vid());
     }
+    if (from.has_image_width()) {
+      set_image_width(from.image_width());
+    }
+    if (from.has_image_height()) {
+      set_image_height(from.image_height());
+    }
+    if (from.has_image_id()) {
+      set_image_id(from.image_id());
+    }
   }
   mutable_unknown_fields()->MergeFrom(from.unknown_fields());
 }
@@ -802,7 +918,7 @@ void AlarmInfo::CopyFrom(const AlarmInfo& from) {
 }
 
 bool AlarmInfo::IsInitialized() const {
-  if ((_has_bits_[0] & 0x000003ff) != 0x000003ff) return false;
+  if ((_has_bits_[0] & 0x0000e3ff) != 0x0000e3ff) return false;
 
   return true;
 }
@@ -822,6 +938,9 @@ void AlarmInfo::Swap(AlarmInfo* other) {
     std::swap(src_image_, other->src_image_);
     std::swap(alarm_pic_, other->alarm_pic_);
     std::swap(alarm_vid_, other->alarm_vid_);
+    std::swap(image_width_, other->image_width_);
+    std::swap(image_height_, other->image_height_);
+    std::swap(image_id_, other->image_id_);
     std::swap(_has_bits_[0], other->_has_bits_[0]);
     _unknown_fields_.Swap(&other->_unknown_fields_);
     std::swap(_cached_size_, other->_cached_size_);

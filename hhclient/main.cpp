@@ -18,6 +18,9 @@ class HHCallback: public HHlientCallback{
     void onAlarm(const HHAlarm &alarm) {
         cout << "-----------------onAlarm----------------------- " << endl;
         
+        cout << "image_id " << alarm.image_id << endl;
+        cout << "image_width " << alarm.image_width << endl;
+        cout << "image_height " << alarm.image_height << endl;
         cout << "id " << alarm.id << endl;
         cout << "car_type " << alarm.car_type << endl;
         cout << "timestamp " << alarm.timestamp << endl;
@@ -28,6 +31,7 @@ class HHCallback: public HHlientCallback{
         cout << "start " << alarm.start_timestamp << endl;
         cout << "end " << alarm.end_timestamp << endl;
         cout << "credibility " << alarm.credibility << endl;
+
         
         //save alarm image
         if(alarm.alarm_pic_size > 1){

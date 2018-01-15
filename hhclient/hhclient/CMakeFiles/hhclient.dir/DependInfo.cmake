@@ -4,11 +4,11 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/usr/local/hhit/dev/msserver/hhclient/hhclient/HHClient.cpp" "/usr/local/hhit/dev/msserver/hhclient/hhclient/CMakeFiles/hhclient.dir/HHClient.cpp.o"
-  "/usr/local/hhit/dev/msserver/hhclient/hhclient/core/ThreadPool.cpp" "/usr/local/hhit/dev/msserver/hhclient/hhclient/CMakeFiles/hhclient.dir/core/ThreadPool.cpp.o"
-  "/usr/local/hhit/dev/msserver/hhclient/hhclient/protobuf/alarm.pb.cc" "/usr/local/hhit/dev/msserver/hhclient/hhclient/CMakeFiles/hhclient.dir/protobuf/alarm.pb.cc.o"
-  "/usr/local/hhit/dev/msserver/hhclient/hhclient/socket_base/Socket.cpp" "/usr/local/hhit/dev/msserver/hhclient/hhclient/CMakeFiles/hhclient.dir/socket_base/Socket.cpp.o"
-  "/usr/local/hhit/dev/msserver/hhclient/hhclient/socket_client/ClientSocket.cpp" "/usr/local/hhit/dev/msserver/hhclient/hhclient/CMakeFiles/hhclient.dir/socket_client/ClientSocket.cpp.o"
+  "/usr/local/hhit/detection/msserver/hhclient/hhclient/HHClient.cpp" "/usr/local/hhit/detection/msserver/hhclient/hhclient/CMakeFiles/hhclient.dir/HHClient.cpp.o"
+  "/usr/local/hhit/detection/msserver/hhclient/hhclient/core/ThreadPool.cpp" "/usr/local/hhit/detection/msserver/hhclient/hhclient/CMakeFiles/hhclient.dir/core/ThreadPool.cpp.o"
+  "/usr/local/hhit/detection/msserver/hhclient/hhclient/protobuf/alarm.pb.cc" "/usr/local/hhit/detection/msserver/hhclient/hhclient/CMakeFiles/hhclient.dir/protobuf/alarm.pb.cc.o"
+  "/usr/local/hhit/detection/msserver/hhclient/hhclient/socket_base/Socket.cpp" "/usr/local/hhit/detection/msserver/hhclient/hhclient/CMakeFiles/hhclient.dir/socket_base/Socket.cpp.o"
+  "/usr/local/hhit/detection/msserver/hhclient/hhclient/socket_client/ClientSocket.cpp" "/usr/local/hhit/detection/msserver/hhclient/hhclient/CMakeFiles/hhclient.dir/socket_client/ClientSocket.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

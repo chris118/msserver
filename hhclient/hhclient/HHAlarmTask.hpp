@@ -119,6 +119,9 @@ public:
                     alarm.start_timestamp = alarm_info->start_timestamp();
                     alarm.end_timestamp = alarm_info->end_timestamp();
                     alarm.credibility = alarm_info->credibility();
+                    alarm.image_id = alarm_info->image_id();
+                    alarm.image_width = alarm_info->image_width();
+                    alarm.image_height = alarm_info->image_height();
                     
                     // alarm image
                     string alarm_pic = alarm_info->alarm_pic();

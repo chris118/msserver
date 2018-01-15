@@ -194,6 +194,27 @@ class AlarmInfo : public ::google::protobuf::Message {
   inline ::std::string* release_alarm_vid();
   inline void set_allocated_alarm_vid(::std::string* alarm_vid);
 
+  // required int32 image_width = 14;
+  inline bool has_image_width() const;
+  inline void clear_image_width();
+  static const int kImageWidthFieldNumber = 14;
+  inline ::google::protobuf::int32 image_width() const;
+  inline void set_image_width(::google::protobuf::int32 value);
+
+  // required int32 image_height = 15;
+  inline bool has_image_height() const;
+  inline void clear_image_height();
+  static const int kImageHeightFieldNumber = 15;
+  inline ::google::protobuf::int32 image_height() const;
+  inline void set_image_height(::google::protobuf::int32 value);
+
+  // required int32 image_id = 16;
+  inline bool has_image_id() const;
+  inline void clear_image_id();
+  static const int kImageIdFieldNumber = 16;
+  inline ::google::protobuf::int32 image_id() const;
+  inline void set_image_id(::google::protobuf::int32 value);
+
   // @@protoc_insertion_point(class_scope:AlarmInfo)
  private:
   inline void set_has_id();
@@ -222,6 +243,12 @@ class AlarmInfo : public ::google::protobuf::Message {
   inline void clear_has_alarm_pic();
   inline void set_has_alarm_vid();
   inline void clear_has_alarm_vid();
+  inline void set_has_image_width();
+  inline void clear_has_image_width();
+  inline void set_has_image_height();
+  inline void clear_has_image_height();
+  inline void set_has_image_id();
+  inline void clear_has_image_id();
 
   ::google::protobuf::UnknownFieldSet _unknown_fields_;
 
@@ -240,6 +267,9 @@ class AlarmInfo : public ::google::protobuf::Message {
   ::std::string* src_image_;
   ::std::string* alarm_pic_;
   ::std::string* alarm_vid_;
+  ::google::protobuf::int32 image_width_;
+  ::google::protobuf::int32 image_height_;
+  ::google::protobuf::int32 image_id_;
   friend void  protobuf_AddDesc_alarm_2eproto();
   friend void protobuf_AssignDesc_alarm_2eproto();
   friend void protobuf_ShutdownFile_alarm_2eproto();
@@ -720,6 +750,78 @@ inline void AlarmInfo::set_allocated_alarm_vid(::std::string* alarm_vid) {
     alarm_vid_ = const_cast< ::std::string*>(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   }
   // @@protoc_insertion_point(field_set_allocated:AlarmInfo.alarm_vid)
+}
+
+// required int32 image_width = 14;
+inline bool AlarmInfo::has_image_width() const {
+  return (_has_bits_[0] & 0x00002000u) != 0;
+}
+inline void AlarmInfo::set_has_image_width() {
+  _has_bits_[0] |= 0x00002000u;
+}
+inline void AlarmInfo::clear_has_image_width() {
+  _has_bits_[0] &= ~0x00002000u;
+}
+inline void AlarmInfo::clear_image_width() {
+  image_width_ = 0;
+  clear_has_image_width();
+}
+inline ::google::protobuf::int32 AlarmInfo::image_width() const {
+  // @@protoc_insertion_point(field_get:AlarmInfo.image_width)
+  return image_width_;
+}
+inline void AlarmInfo::set_image_width(::google::protobuf::int32 value) {
+  set_has_image_width();
+  image_width_ = value;
+  // @@protoc_insertion_point(field_set:AlarmInfo.image_width)
+}
+
+// required int32 image_height = 15;
+inline bool AlarmInfo::has_image_height() const {
+  return (_has_bits_[0] & 0x00004000u) != 0;
+}
+inline void AlarmInfo::set_has_image_height() {
+  _has_bits_[0] |= 0x00004000u;
+}
+inline void AlarmInfo::clear_has_image_height() {
+  _has_bits_[0] &= ~0x00004000u;
+}
+inline void AlarmInfo::clear_image_height() {
+  image_height_ = 0;
+  clear_has_image_height();
+}
+inline ::google::protobuf::int32 AlarmInfo::image_height() const {
+  // @@protoc_insertion_point(field_get:AlarmInfo.image_height)
+  return image_height_;
+}
+inline void AlarmInfo::set_image_height(::google::protobuf::int32 value) {
+  set_has_image_height();
+  image_height_ = value;
+  // @@protoc_insertion_point(field_set:AlarmInfo.image_height)
+}
+
+// required int32 image_id = 16;
+inline bool AlarmInfo::has_image_id() const {
+  return (_has_bits_[0] & 0x00008000u) != 0;
+}
+inline void AlarmInfo::set_has_image_id() {
+  _has_bits_[0] |= 0x00008000u;
+}
+inline void AlarmInfo::clear_has_image_id() {
+  _has_bits_[0] &= ~0x00008000u;
+}
+inline void AlarmInfo::clear_image_id() {
+  image_id_ = 0;
+  clear_has_image_id();
+}
+inline ::google::protobuf::int32 AlarmInfo::image_id() const {
+  // @@protoc_insertion_point(field_get:AlarmInfo.image_id)
+  return image_id_;
+}
+inline void AlarmInfo::set_image_id(::google::protobuf::int32 value) {
+  set_has_image_id();
+  image_id_ = value;
+  // @@protoc_insertion_point(field_set:AlarmInfo.image_id)
 }
 
 

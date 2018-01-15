@@ -13,4 +13,7 @@ message AlarmInfo
     optional bytes src_image = 11;
     optional bytes alarm_pic = 12;
     optional bytes alarm_vid = 13;
+    required int32 image_width = 14;
+    required int32 image_height = 15;
+    required int32 image_id = 16;
 }

@@ -1,4 +1,4 @@
-The system is: Linux - 4.4.0-101-generic - x86_64
+The system is: Linux - 4.4.0-87-generic - x86_64
 Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
 Compiler: /usr/bin/cc 
 Build flags: 
@@ -10,7 +10,7 @@ The output was:
 
 Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
 
-The C compiler identification is GNU, found in "/usr/local/hhit/dev/msserver/hhclient/hhclient/CMakeFiles/3.5.1/CompilerIdC/a.out"
+The C compiler identification is GNU, found in "/usr/local/hhit/detection/msserver/hhclient/hhclient/CMakeFiles/3.5.1/CompilerIdC/a.out"
 
 Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
 Compiler: /usr/bin/c++ 
@@ -23,33 +23,33 @@ The output was:
 
 Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
 
-The CXX compiler identification is GNU, found in "/usr/local/hhit/dev/msserver/hhclient/hhclient/CMakeFiles/3.5.1/CompilerIdCXX/a.out"
+The CXX compiler identification is GNU, found in "/usr/local/hhit/detection/msserver/hhclient/hhclient/CMakeFiles/3.5.1/CompilerIdCXX/a.out"
 
 Determining if the C compiler works passed with the following output:
-Change Dir: /usr/local/hhit/dev/msserver/hhclient/hhclient/CMakeFiles/CMakeTmp
+Change Dir: /usr/local/hhit/detection/msserver/hhclient/hhclient/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_9bc8f/fast"
-/usr/bin/make -f CMakeFiles/cmTC_9bc8f.dir/build.make CMakeFiles/cmTC_9bc8f.dir/build
-make[1]: Entering directory '/usr/local/hhit/dev/msserver/hhclient/hhclient/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_9bc8f.dir/testCCompiler.c.o
-/usr/bin/cc     -o CMakeFiles/cmTC_9bc8f.dir/testCCompiler.c.o   -c /usr/local/hhit/dev/msserver/hhclient/hhclient/CMakeFiles/CMakeTmp/testCCompiler.c
-Linking C executable cmTC_9bc8f
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9bc8f.dir/link.txt --verbose=1
-/usr/bin/cc       CMakeFiles/cmTC_9bc8f.dir/testCCompiler.c.o  -o cmTC_9bc8f -rdynamic 
-make[1]: Leaving directory '/usr/local/hhit/dev/msserver/hhclient/hhclient/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_478a0/fast"
+/usr/bin/make -f CMakeFiles/cmTC_478a0.dir/build.make CMakeFiles/cmTC_478a0.dir/build
+make[1]: Entering directory '/usr/local/hhit/detection/msserver/hhclient/hhclient/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_478a0.dir/testCCompiler.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_478a0.dir/testCCompiler.c.o   -c /usr/local/hhit/detection/msserver/hhclient/hhclient/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_478a0
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_478a0.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_478a0.dir/testCCompiler.c.o  -o cmTC_478a0 -rdynamic 
+make[1]: Leaving directory '/usr/local/hhit/detection/msserver/hhclient/hhclient/CMakeFiles/CMakeTmp'
 
 
 Detecting C compiler ABI info compiled with the following output:
-Change Dir: /usr/local/hhit/dev/msserver/hhclient/hhclient/CMakeFiles/CMakeTmp
+Change Dir: /usr/local/hhit/detection/msserver/hhclient/hhclient/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_24493/fast"
-/usr/bin/make -f CMakeFiles/cmTC_24493.dir/build.make CMakeFiles/cmTC_24493.dir/build
-make[1]: Entering directory '/usr/local/hhit/dev/msserver/hhclient/hhclient/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_24493.dir/CMakeCCompilerABI.c.o
-/usr/bin/cc     -o CMakeFiles/cmTC_24493.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.5/Modules/CMakeCCompilerABI.c
-Linking C executable cmTC_24493
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_24493.dir/link.txt --verbose=1
-/usr/bin/cc      -v CMakeFiles/cmTC_24493.dir/CMakeCCompilerABI.c.o  -o cmTC_24493 -rdynamic  
+Run Build Command:"/usr/bin/make" "cmTC_a2acc/fast"
+/usr/bin/make -f CMakeFiles/cmTC_a2acc.dir/build.make CMakeFiles/cmTC_a2acc.dir/build
+make[1]: Entering directory '/usr/local/hhit/detection/msserver/hhclient/hhclient/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_a2acc.dir/CMakeCCompilerABI.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_a2acc.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.5/Modules/CMakeCCompilerABI.c
+Linking C executable cmTC_a2acc
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a2acc.dir/link.txt --verbose=1
+/usr/bin/cc      -v CMakeFiles/cmTC_a2acc.dir/CMakeCCompilerABI.c.o  -o cmTC_a2acc -rdynamic  
 Using built-in specs.
 COLLECT_GCC=/usr/bin/cc
 COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper
@@ -59,23 +59,23 @@ Thread model: posix
 gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.5) 
 COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/
 LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_24493' '-rdynamic' '-mtune=generic' '-march=x86-64'
- /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccpPQXhQ.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_24493 /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_24493.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o
-make[1]: Leaving directory '/usr/local/hhit/dev/msserver/hhclient/hhclient/CMakeFiles/CMakeTmp'
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_a2acc' '-rdynamic' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/cc2kT3cF.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_a2acc /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_a2acc.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o
+make[1]: Leaving directory '/usr/local/hhit/detection/msserver/hhclient/hhclient/CMakeFiles/CMakeTmp'
 
 
 Parsed C implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|([^/\]+-)?ld|collect2)[^/\]*( |$)]
-  ignore line: [Change Dir: /usr/local/hhit/dev/msserver/hhclient/hhclient/CMakeFiles/CMakeTmp]
+  ignore line: [Change Dir: /usr/local/hhit/detection/msserver/hhclient/hhclient/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_24493/fast"]
-  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_24493.dir/build.make CMakeFiles/cmTC_24493.dir/build]
-  ignore line: [make[1]: Entering directory '/usr/local/hhit/dev/msserver/hhclient/hhclient/CMakeFiles/CMakeTmp']
-  ignore line: [Building C object CMakeFiles/cmTC_24493.dir/CMakeCCompilerABI.c.o]
-  ignore line: [/usr/bin/cc     -o CMakeFiles/cmTC_24493.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.5/Modules/CMakeCCompilerABI.c]
-  ignore line: [Linking C executable cmTC_24493]
-  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_24493.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/cc      -v CMakeFiles/cmTC_24493.dir/CMakeCCompilerABI.c.o  -o cmTC_24493 -rdynamic  ]
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_a2acc/fast"]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_a2acc.dir/build.make CMakeFiles/cmTC_a2acc.dir/build]
+  ignore line: [make[1]: Entering directory '/usr/local/hhit/detection/msserver/hhclient/hhclient/CMakeFiles/CMakeTmp']
+  ignore line: [Building C object CMakeFiles/cmTC_a2acc.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/usr/bin/cc     -o CMakeFiles/cmTC_a2acc.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.5/Modules/CMakeCCompilerABI.c]
+  ignore line: [Linking C executable cmTC_a2acc]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a2acc.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/cc      -v CMakeFiles/cmTC_a2acc.dir/CMakeCCompilerABI.c.o  -o cmTC_a2acc -rdynamic  ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/cc]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper]
@@ -85,13 +85,13 @@ Parsed C implicit link information from above output:
   ignore line: [gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.5) ]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_24493' '-rdynamic' '-mtune=generic' '-march=x86-64']
-  link line: [ /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccpPQXhQ.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_24493 /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_24493.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_a2acc' '-rdynamic' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/cc2kT3cF.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_a2acc /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_a2acc.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o]
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/collect2] ==> ignore
     arg [-plugin] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so] ==> ignore
     arg [-plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/ccpPQXhQ.res] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/cc2kT3cF.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -109,7 +109,7 @@ Parsed C implicit link information from above output:
     arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
     arg [-zrelro] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_24493] ==> ignore
+    arg [cmTC_a2acc] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o] ==> ignore
@@ -121,7 +121,7 @@ Parsed C implicit link information from above output:
     arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
     arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
     arg [-L/usr/lib/gcc/x86_64-linux-gnu/5/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/5/../../..]
-    arg [CMakeFiles/cmTC_24493.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [CMakeFiles/cmTC_a2acc.dir/CMakeCCompilerABI.c.o] ==> ignore
     arg [-lgcc] ==> lib [gcc]
     arg [--as-needed] ==> ignore
     arg [-lgcc_s] ==> lib [gcc_s]
@@ -153,17 +153,17 @@ Parsed C implicit link information from above output:
 
 
 Detecting C [-std=c11] compiler features compiled with the following output:
-Change Dir: /usr/local/hhit/dev/msserver/hhclient/hhclient/CMakeFiles/CMakeTmp
+Change Dir: /usr/local/hhit/detection/msserver/hhclient/hhclient/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_ccd67/fast"
-/usr/bin/make -f CMakeFiles/cmTC_ccd67.dir/build.make CMakeFiles/cmTC_ccd67.dir/build
-make[1]: Entering directory '/usr/local/hhit/dev/msserver/hhclient/hhclient/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_ccd67.dir/feature_tests.c.o
-/usr/bin/cc    -std=c11 -o CMakeFiles/cmTC_ccd67.dir/feature_tests.c.o   -c /usr/local/hhit/dev/msserver/hhclient/hhclient/CMakeFiles/feature_tests.c
-Linking C executable cmTC_ccd67
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ccd67.dir/link.txt --verbose=1
-/usr/bin/cc       CMakeFiles/cmTC_ccd67.dir/feature_tests.c.o  -o cmTC_ccd67 -rdynamic 
-make[1]: Leaving directory '/usr/local/hhit/dev/msserver/hhclient/hhclient/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_66f74/fast"
+/usr/bin/make -f CMakeFiles/cmTC_66f74.dir/build.make CMakeFiles/cmTC_66f74.dir/build
+make[1]: Entering directory '/usr/local/hhit/detection/msserver/hhclient/hhclient/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_66f74.dir/feature_tests.c.o
+/usr/bin/cc    -std=c11 -o CMakeFiles/cmTC_66f74.dir/feature_tests.c.o   -c /usr/local/hhit/detection/msserver/hhclient/hhclient/CMakeFiles/feature_tests.c
+Linking C executable cmTC_66f74
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_66f74.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_66f74.dir/feature_tests.c.o  -o cmTC_66f74 -rdynamic 
+make[1]: Leaving directory '/usr/local/hhit/detection/msserver/hhclient/hhclient/CMakeFiles/CMakeTmp'
 
 
     Feature record: C_FEATURE:1c_function_prototypes
@@ -173,17 +173,17 @@ make[1]: Leaving directory '/usr/local/hhit/dev/msserver/hhclient/hhclient/CMake
 
 
 Detecting C [-std=c99] compiler features compiled with the following output:
-Change Dir: /usr/local/hhit/dev/msserver/hhclient/hhclient/CMakeFiles/CMakeTmp
+Change Dir: /usr/local/hhit/detection/msserver/hhclient/hhclient/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_c8569/fast"
-/usr/bin/make -f CMakeFiles/cmTC_c8569.dir/build.make CMakeFiles/cmTC_c8569.dir/build
-make[1]: Entering directory '/usr/local/hhit/dev/msserver/hhclient/hhclient/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_c8569.dir/feature_tests.c.o
-/usr/bin/cc    -std=c99 -o CMakeFiles/cmTC_c8569.dir/feature_tests.c.o   -c /usr/local/hhit/dev/msserver/hhclient/hhclient/CMakeFiles/feature_tests.c
-Linking C executable cmTC_c8569
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c8569.dir/link.txt --verbose=1
-/usr/bin/cc       CMakeFiles/cmTC_c8569.dir/feature_tests.c.o  -o cmTC_c8569 -rdynamic 
-make[1]: Leaving directory '/usr/local/hhit/dev/msserver/hhclient/hhclient/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_abb85/fast"
+/usr/bin/make -f CMakeFiles/cmTC_abb85.dir/build.make CMakeFiles/cmTC_abb85.dir/build
+make[1]: Entering directory '/usr/local/hhit/detection/msserver/hhclient/hhclient/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_abb85.dir/feature_tests.c.o
+/usr/bin/cc    -std=c99 -o CMakeFiles/cmTC_abb85.dir/feature_tests.c.o   -c /usr/local/hhit/detection/msserver/hhclient/hhclient/CMakeFiles/feature_tests.c
+Linking C executable cmTC_abb85
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_abb85.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_abb85.dir/feature_tests.c.o  -o cmTC_abb85 -rdynamic 
+make[1]: Leaving directory '/usr/local/hhit/detection/msserver/hhclient/hhclient/CMakeFiles/CMakeTmp'
 
 
     Feature record: C_FEATURE:1c_function_prototypes
@@ -193,17 +193,17 @@ make[1]: Leaving directory '/usr/local/hhit/dev/msserver/hhclient/hhclient/CMake
 
 
 Detecting C [-std=c90] compiler features compiled with the following output:
-Change Dir: /usr/local/hhit/dev/msserver/hhclient/hhclient/CMakeFiles/CMakeTmp
+Change Dir: /usr/local/hhit/detection/msserver/hhclient/hhclient/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_08252/fast"
-/usr/bin/make -f CMakeFiles/cmTC_08252.dir/build.make CMakeFiles/cmTC_08252.dir/build
-make[1]: Entering directory '/usr/local/hhit/dev/msserver/hhclient/hhclient/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_08252.dir/feature_tests.c.o
-/usr/bin/cc    -std=c90 -o CMakeFiles/cmTC_08252.dir/feature_tests.c.o   -c /usr/local/hhit/dev/msserver/hhclient/hhclient/CMakeFiles/feature_tests.c
-Linking C executable cmTC_08252
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_08252.dir/link.txt --verbose=1
-/usr/bin/cc       CMakeFiles/cmTC_08252.dir/feature_tests.c.o  -o cmTC_08252 -rdynamic 
-make[1]: Leaving directory '/usr/local/hhit/dev/msserver/hhclient/hhclient/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_bb653/fast"
+/usr/bin/make -f CMakeFiles/cmTC_bb653.dir/build.make CMakeFiles/cmTC_bb653.dir/build
+make[1]: Entering directory '/usr/local/hhit/detection/msserver/hhclient/hhclient/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_bb653.dir/feature_tests.c.o
+/usr/bin/cc    -std=c90 -o CMakeFiles/cmTC_bb653.dir/feature_tests.c.o   -c /usr/local/hhit/detection/msserver/hhclient/hhclient/CMakeFiles/feature_tests.c
+Linking C executable cmTC_bb653
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_bb653.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_bb653.dir/feature_tests.c.o  -o cmTC_bb653 -rdynamic 
+make[1]: Leaving directory '/usr/local/hhit/detection/msserver/hhclient/hhclient/CMakeFiles/CMakeTmp'
 
 
     Feature record: C_FEATURE:1c_function_prototypes
@@ -211,30 +211,30 @@ make[1]: Leaving directory '/usr/local/hhit/dev/msserver/hhclient/hhclient/CMake
     Feature record: C_FEATURE:0c_static_assert
     Feature record: C_FEATURE:0c_variadic_macros
 Determining if the CXX compiler works passed with the following output:
-Change Dir: /usr/local/hhit/dev/msserver/hhclient/hhclient/CMakeFiles/CMakeTmp
+Change Dir: /usr/local/hhit/detection/msserver/hhclient/hhclient/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_c8edd/fast"
-/usr/bin/make -f CMakeFiles/cmTC_c8edd.dir/build.make CMakeFiles/cmTC_c8edd.dir/build
-make[1]: Entering directory '/usr/local/hhit/dev/msserver/hhclient/hhclient/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_c8edd.dir/testCXXCompiler.cxx.o
-/usr/bin/c++      -o CMakeFiles/cmTC_c8edd.dir/testCXXCompiler.cxx.o -c /usr/local/hhit/dev/msserver/hhclient/hhclient/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
-Linking CXX executable cmTC_c8edd
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c8edd.dir/link.txt --verbose=1
-/usr/bin/c++        CMakeFiles/cmTC_c8edd.dir/testCXXCompiler.cxx.o  -o cmTC_c8edd -rdynamic 
-make[1]: Leaving directory '/usr/local/hhit/dev/msserver/hhclient/hhclient/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_76ab0/fast"
+/usr/bin/make -f CMakeFiles/cmTC_76ab0.dir/build.make CMakeFiles/cmTC_76ab0.dir/build
+make[1]: Entering directory '/usr/local/hhit/detection/msserver/hhclient/hhclient/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_76ab0.dir/testCXXCompiler.cxx.o
+/usr/bin/c++      -o CMakeFiles/cmTC_76ab0.dir/testCXXCompiler.cxx.o -c /usr/local/hhit/detection/msserver/hhclient/hhclient/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
+Linking CXX executable cmTC_76ab0
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_76ab0.dir/link.txt --verbose=1
+/usr/bin/c++        CMakeFiles/cmTC_76ab0.dir/testCXXCompiler.cxx.o  -o cmTC_76ab0 -rdynamic 
+make[1]: Leaving directory '/usr/local/hhit/detection/msserver/hhclient/hhclient/CMakeFiles/CMakeTmp'
 
 
 Detecting CXX compiler ABI info compiled with the following output:
-Change Dir: /usr/local/hhit/dev/msserver/hhclient/hhclient/CMakeFiles/CMakeTmp
+Change Dir: /usr/local/hhit/detection/msserver/hhclient/hhclient/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_09255/fast"
-/usr/bin/make -f CMakeFiles/cmTC_09255.dir/build.make CMakeFiles/cmTC_09255.dir/build
-make[1]: Entering directory '/usr/local/hhit/dev/msserver/hhclient/hhclient/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_09255.dir/CMakeCXXCompilerABI.cpp.o
-/usr/bin/c++      -o CMakeFiles/cmTC_09255.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.5/Modules/CMakeCXXCompilerABI.cpp
-Linking CXX executable cmTC_09255
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_09255.dir/link.txt --verbose=1
-/usr/bin/c++       -v CMakeFiles/cmTC_09255.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_09255 -rdynamic  
+Run Build Command:"/usr/bin/make" "cmTC_a304b/fast"
+/usr/bin/make -f CMakeFiles/cmTC_a304b.dir/build.make CMakeFiles/cmTC_a304b.dir/build
+make[1]: Entering directory '/usr/local/hhit/detection/msserver/hhclient/hhclient/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_a304b.dir/CMakeCXXCompilerABI.cpp.o
+/usr/bin/c++      -o CMakeFiles/cmTC_a304b.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.5/Modules/CMakeCXXCompilerABI.cpp
+Linking CXX executable cmTC_a304b
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a304b.dir/link.txt --verbose=1
+/usr/bin/c++       -v CMakeFiles/cmTC_a304b.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_a304b -rdynamic  
 Using built-in specs.
 COLLECT_GCC=/usr/bin/c++
 COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper
@@ -244,23 +244,23 @@ Thread model: posix
 gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.5) 
 COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/
 LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_09255' '-rdynamic' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
- /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccKJshgF.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_09255 /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_09255.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o
-make[1]: Leaving directory '/usr/local/hhit/dev/msserver/hhclient/hhclient/CMakeFiles/CMakeTmp'
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_a304b' '-rdynamic' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccmengmO.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_a304b /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_a304b.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o
+make[1]: Leaving directory '/usr/local/hhit/detection/msserver/hhclient/hhclient/CMakeFiles/CMakeTmp'
 
 
 Parsed CXX implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|([^/\]+-)?ld|collect2)[^/\]*( |$)]
-  ignore line: [Change Dir: /usr/local/hhit/dev/msserver/hhclient/hhclient/CMakeFiles/CMakeTmp]
+  ignore line: [Change Dir: /usr/local/hhit/detection/msserver/hhclient/hhclient/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_09255/fast"]
-  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_09255.dir/build.make CMakeFiles/cmTC_09255.dir/build]
-  ignore line: [make[1]: Entering directory '/usr/local/hhit/dev/msserver/hhclient/hhclient/CMakeFiles/CMakeTmp']
-  ignore line: [Building CXX object CMakeFiles/cmTC_09255.dir/CMakeCXXCompilerABI.cpp.o]
-  ignore line: [/usr/bin/c++      -o CMakeFiles/cmTC_09255.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.5/Modules/CMakeCXXCompilerABI.cpp]
-  ignore line: [Linking CXX executable cmTC_09255]
-  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_09255.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/c++       -v CMakeFiles/cmTC_09255.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_09255 -rdynamic  ]
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_a304b/fast"]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_a304b.dir/build.make CMakeFiles/cmTC_a304b.dir/build]
+  ignore line: [make[1]: Entering directory '/usr/local/hhit/detection/msserver/hhclient/hhclient/CMakeFiles/CMakeTmp']
+  ignore line: [Building CXX object CMakeFiles/cmTC_a304b.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [/usr/bin/c++      -o CMakeFiles/cmTC_a304b.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.5/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [Linking CXX executable cmTC_a304b]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a304b.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/c++       -v CMakeFiles/cmTC_a304b.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_a304b -rdynamic  ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/c++]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper]
@@ -270,13 +270,13 @@ Parsed CXX implicit link information from above output:
   ignore line: [gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.5) ]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_09255' '-rdynamic' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
-  link line: [ /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccKJshgF.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_09255 /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_09255.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_a304b' '-rdynamic' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccmengmO.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_a304b /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_a304b.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o]
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/collect2] ==> ignore
     arg [-plugin] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so] ==> ignore
     arg [-plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/ccKJshgF.res] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccmengmO.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -294,7 +294,7 @@ Parsed CXX implicit link information from above output:
     arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
     arg [-zrelro] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_09255] ==> ignore
+    arg [cmTC_a304b] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o] ==> ignore
@@ -306,7 +306,7 @@ Parsed CXX implicit link information from above output:
     arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
     arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
     arg [-L/usr/lib/gcc/x86_64-linux-gnu/5/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/5/../../..]
-    arg [CMakeFiles/cmTC_09255.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [CMakeFiles/cmTC_a304b.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
     arg [-lstdc++] ==> lib [stdc++]
     arg [-lm] ==> lib [m]
     arg [-lgcc_s] ==> lib [gcc_s]
@@ -336,17 +336,17 @@ Parsed CXX implicit link information from above output:
 
 
 Detecting CXX [-std=c++14] compiler features compiled with the following output:
-Change Dir: /usr/local/hhit/dev/msserver/hhclient/hhclient/CMakeFiles/CMakeTmp
+Change Dir: /usr/local/hhit/detection/msserver/hhclient/hhclient/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_a534e/fast"
-/usr/bin/make -f CMakeFiles/cmTC_a534e.dir/build.make CMakeFiles/cmTC_a534e.dir/build
-make[1]: Entering directory '/usr/local/hhit/dev/msserver/hhclient/hhclient/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_a534e.dir/feature_tests.cxx.o
-/usr/bin/c++     -std=c++14 -o CMakeFiles/cmTC_a534e.dir/feature_tests.cxx.o -c /usr/local/hhit/dev/msserver/hhclient/hhclient/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_a534e
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a534e.dir/link.txt --verbose=1
-/usr/bin/c++        CMakeFiles/cmTC_a534e.dir/feature_tests.cxx.o  -o cmTC_a534e -rdynamic 
-make[1]: Leaving directory '/usr/local/hhit/dev/msserver/hhclient/hhclient/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_058a5/fast"
+/usr/bin/make -f CMakeFiles/cmTC_058a5.dir/build.make CMakeFiles/cmTC_058a5.dir/build
+make[1]: Entering directory '/usr/local/hhit/detection/msserver/hhclient/hhclient/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_058a5.dir/feature_tests.cxx.o
+/usr/bin/c++     -std=c++14 -o CMakeFiles/cmTC_058a5.dir/feature_tests.cxx.o -c /usr/local/hhit/detection/msserver/hhclient/hhclient/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_058a5
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_058a5.dir/link.txt --verbose=1
+/usr/bin/c++        CMakeFiles/cmTC_058a5.dir/feature_tests.cxx.o  -o cmTC_058a5 -rdynamic 
+make[1]: Leaving directory '/usr/local/hhit/detection/msserver/hhclient/hhclient/CMakeFiles/CMakeTmp'
 
 
     Feature record: CXX_FEATURE:1cxx_aggregate_default_initializers
@@ -409,17 +409,17 @@ make[1]: Leaving directory '/usr/local/hhit/dev/msserver/hhclient/hhclient/CMake
 
 
 Detecting CXX [-std=c++11] compiler features compiled with the following output:
-Change Dir: /usr/local/hhit/dev/msserver/hhclient/hhclient/CMakeFiles/CMakeTmp
+Change Dir: /usr/local/hhit/detection/msserver/hhclient/hhclient/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_72c9e/fast"
-/usr/bin/make -f CMakeFiles/cmTC_72c9e.dir/build.make CMakeFiles/cmTC_72c9e.dir/build
-make[1]: Entering directory '/usr/local/hhit/dev/msserver/hhclient/hhclient/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_72c9e.dir/feature_tests.cxx.o
-/usr/bin/c++     -std=c++11 -o CMakeFiles/cmTC_72c9e.dir/feature_tests.cxx.o -c /usr/local/hhit/dev/msserver/hhclient/hhclient/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_72c9e
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_72c9e.dir/link.txt --verbose=1
-/usr/bin/c++        CMakeFiles/cmTC_72c9e.dir/feature_tests.cxx.o  -o cmTC_72c9e -rdynamic 
-make[1]: Leaving directory '/usr/local/hhit/dev/msserver/hhclient/hhclient/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_ddfb0/fast"
+/usr/bin/make -f CMakeFiles/cmTC_ddfb0.dir/build.make CMakeFiles/cmTC_ddfb0.dir/build
+make[1]: Entering directory '/usr/local/hhit/detection/msserver/hhclient/hhclient/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_ddfb0.dir/feature_tests.cxx.o
+/usr/bin/c++     -std=c++11 -o CMakeFiles/cmTC_ddfb0.dir/feature_tests.cxx.o -c /usr/local/hhit/detection/msserver/hhclient/hhclient/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_ddfb0
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ddfb0.dir/link.txt --verbose=1
+/usr/bin/c++        CMakeFiles/cmTC_ddfb0.dir/feature_tests.cxx.o  -o cmTC_ddfb0 -rdynamic 
+make[1]: Leaving directory '/usr/local/hhit/detection/msserver/hhclient/hhclient/CMakeFiles/CMakeTmp'
 
 
     Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers
@@ -482,17 +482,17 @@ make[1]: Leaving directory '/usr/local/hhit/dev/msserver/hhclient/hhclient/CMake
 
 
 Detecting CXX [-std=c++98] compiler features compiled with the following output:
-Change Dir: /usr/local/hhit/dev/msserver/hhclient/hhclient/CMakeFiles/CMakeTmp
+Change Dir: /usr/local/hhit/detection/msserver/hhclient/hhclient/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_8ac51/fast"
-/usr/bin/make -f CMakeFiles/cmTC_8ac51.dir/build.make CMakeFiles/cmTC_8ac51.dir/build
-make[1]: Entering directory '/usr/local/hhit/dev/msserver/hhclient/hhclient/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_8ac51.dir/feature_tests.cxx.o
-/usr/bin/c++     -std=c++98 -o CMakeFiles/cmTC_8ac51.dir/feature_tests.cxx.o -c /usr/local/hhit/dev/msserver/hhclient/hhclient/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_8ac51
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8ac51.dir/link.txt --verbose=1
-/usr/bin/c++        CMakeFiles/cmTC_8ac51.dir/feature_tests.cxx.o  -o cmTC_8ac51 -rdynamic 
-make[1]: Leaving directory '/usr/local/hhit/dev/msserver/hhclient/hhclient/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_9b250/fast"
+/usr/bin/make -f CMakeFiles/cmTC_9b250.dir/build.make CMakeFiles/cmTC_9b250.dir/build
+make[1]: Entering directory '/usr/local/hhit/detection/msserver/hhclient/hhclient/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_9b250.dir/feature_tests.cxx.o
+/usr/bin/c++     -std=c++98 -o CMakeFiles/cmTC_9b250.dir/feature_tests.cxx.o -c /usr/local/hhit/detection/msserver/hhclient/hhclient/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_9b250
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9b250.dir/link.txt --verbose=1
+/usr/bin/c++        CMakeFiles/cmTC_9b250.dir/feature_tests.cxx.o  -o cmTC_9b250 -rdynamic 
+make[1]: Leaving directory '/usr/local/hhit/detection/msserver/hhclient/hhclient/CMakeFiles/CMakeTmp'
 
 
     Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers

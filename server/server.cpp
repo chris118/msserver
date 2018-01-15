@@ -195,82 +195,93 @@ void *Server::WorkThreadProc(void *args) {
     int packet_index = 0;
     while(1)
     {
-        sqlite3pp::query qry(db, "SELECT id, obj_type, timestamp, x, y, w, h,\
-                             start_timestamp, end_timestamp, credibility, \
-                             alarm_pic, alarm_vid, src_image, send FROM t_alarminfo");
-        for (auto v : qry) {
-            int id, obj_type, timestamp, x, y, w, h, start_timestamp, end_timestamp, send;
-            float credibility;
-            string alarm_pic, alarm_vid, src_image;
-            
-            v.getter() >> id >> obj_type >> timestamp >> x >> y >> w
-            >> h >> start_timestamp >> end_timestamp >> credibility
-            >> alarm_pic >> alarm_vid >> src_image >> send;
+        // query image
+        HHPRINT("query image");
+        char sql_image[256];
+        sprintf(sql_image, "SELECT id, width, height FROM t_image WHERE send = %d", 0);
+        sqlite3pp::query qry_image(db, sql_image);
+        for (auto v : qry_image) {
+            int image_id, width, height, send;
 
-            if(send == 1){
-                continue;
+            v.getter() >> image_id >> width >> height >> send;
+            cout << "image_id = " << image_id << endl;
+            cout << "width = " <<width << endl;
+            cout << "height = " << height << endl;
+
+            //query alarm by image_id
+            HHPRINT("-------query alarm by image_id---------");
+            char sql[256];
+            sprintf(sql, "SELECT id, obj_type, timestamp, x, y, w, h,start_timestamp, end_timestamp, credibility, \
+                             alarm_pic, alarm_vid, src_image FROM t_alarminfo WHERE image_id = %d", image_id);
+            
+            sqlite3pp::query qry(db, sql);
+            for (auto v : qry) {
+                int id, obj_type, timestamp, x, y, w, h, start_timestamp, end_timestamp;
+                float credibility;
+                string alarm_pic, alarm_vid, src_image;
+                
+                v.getter() >> id >> obj_type >> timestamp >> x >> y >> w
+                >> h >> start_timestamp >> end_timestamp >> credibility
+                >> alarm_pic >> alarm_vid >> src_image;
+
+                if(send == 1){
+                    continue;
+                }
+                
+                cout << "image_id = " << image_id << endl;
+                cout << "id = " << id << endl;
+                cout << "obj_type = " <<obj_type << endl;
+                cout << "timestamp = " << timestamp << endl;
+                cout << "x = " << x << endl;
+                cout << "y = " << y << endl;
+                cout << "w = " << w << endl;
+                cout << "h = " << h << endl;
+                cout << "start_timestamp = " << start_timestamp << endl;
+                cout << "end_timestamp = " << end_timestamp << endl;
+                cout << "credibility = " << credibility << endl;
+                cout << "alarm_pic = " << alarm_pic << endl;
+                cout << "alarm_vid = " << alarm_vid << endl;
+                cout << "src_image = " << src_image << endl;
+
+                //alarm_image
+                std::ifstream ifs_alarm(alarm_pic);
+                if(!ifs_alarm)
+                {
+                    cout << "Error open file..." << endl;
+                    continue;
+                }
+                //If you really need it in a string you can initialize it the same way as the vector
+                std::string alarm_image_data = std::string(std::istreambuf_iterator<char>(ifs_alarm), std::istreambuf_iterator<char>());
+                ifs_alarm.close();
+    
+                // send alarm
+                AlarmInfo info;
+                info.set_image_id(image_id);
+                info.set_image_width(width);
+                info.set_image_height(height);
+
+                info.set_id(id);
+                info.set_obj_type(obj_type);
+                info.set_timestamp(timestamp);
+                info.set_x(x);
+                info.set_y(y);
+                info.set_w(w);
+                info.set_h(h);
+                info.set_start_timestamp(start_timestamp);
+                info.set_end_timestamp(end_timestamp);
+                info.set_credibility(credibility);
+                
+                info.set_alarm_vid("");
+                info.set_src_image("");
+                info.set_alarm_pic(alarm_image_data);
+                
+                Server::SendToAll(packet_index, info);
+                packet_index++;
             }
-            
-            cout << "id = " << id << endl;
-            cout << "obj_type = " <<obj_type << endl;
-            cout << "timestamp = " << timestamp << endl;
-            cout << "x = " << x << endl;
-            cout << "y = " << y << endl;
-            cout << "w = " << w << endl;
-            cout << "h = " << h << endl;
-            cout << "start_timestamp = " << start_timestamp << endl;
-            cout << "end_timestamp = " << end_timestamp << endl;
-            cout << "credibility = " << credibility << endl;
-            cout << "send = " << send << endl;
-            cout << "alarm_pic = " << alarm_pic << endl;
-            cout << "alarm_vid = " << alarm_vid << endl;
-            cout << "src_image = " << src_image << endl;
-
-            //alarm_image
-            std::ifstream ifs_alarm(alarm_pic);
-            if(!ifs_alarm)
-            {
-                cout << "Error open file..." << endl;
-                continue;
-            }
-            //If you really need it in a string you can initialize it the same way as the vector
-            std::string alarm_image_data = std::string(std::istreambuf_iterator<char>(ifs_alarm), std::istreambuf_iterator<char>());
-            ifs_alarm.close();
-            // FILE* f = fopen(alarm_pic.c_str(), "rb");
-            // fseek(f, 0, SEEK_END);
-            // size_t size = ftell(f);
-            // char* cAlarm_image_data = new char[size];
-            // rewind(f);
-            // fread(cAlarm_image_data, sizeof(char), size, f);
-            // // delete[] cAlarm_Image;
-            // string strAlarm_image_data;
-            // strAlarm_image_data.assign(cAlarm_image_data, size);
-            // cout << "image size: " << size << endl;
-
-            
-            // send alarm
-            AlarmInfo info;
-            info.set_id(id);
-            info.set_obj_type(obj_type);
-            info.set_timestamp(timestamp);
-            info.set_x(x);
-            info.set_y(y);
-            info.set_w(w);
-            info.set_h(h);
-            info.set_start_timestamp(start_timestamp);
-            info.set_end_timestamp(end_timestamp);
-            info.set_credibility(credibility);
-            
-            info.set_alarm_vid("");
-            info.set_src_image("");
-            info.set_alarm_pic(alarm_image_data);
-            
-            Server::SendToAll(packet_index, info);
-            packet_index++;
 
             //update status
             char sql_update[1024];
-            sprintf(sql_update, "UPDATE t_alarminfo SET send = 1 WHERE id = %d", id);
+            sprintf(sql_update, "UPDATE t_image SET send = 1 WHERE id = %d", image_id);
             db.execute(sql_update);
         }
         sleep(1);

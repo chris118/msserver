@@ -79,6 +79,10 @@ unistd.h
 -
 iostream
 -
+time.h
+-
+sys/timeb.h
+-
 
 ./utility/iniFile.hpp
 string
