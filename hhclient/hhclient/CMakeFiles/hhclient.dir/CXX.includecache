@@ -139,6 +139,8 @@ assert.h
 -
 stdlib.h
 -
+iostream
+-
 
 /usr/local/hhit/detection/msserver/hhclient/hhclient/core/ThreadPool.h
 deque

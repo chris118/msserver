@@ -8,7 +8,7 @@ vector<Client> Server::clients;
 
 Server::Server(Config config) {
     m_config = config;
-    
+
     //Initialize static mutex from HHThread
     HHThread::InitMutex();
     try
@@ -19,13 +19,13 @@ Server::Server(Config config) {
             HHLOG("Could not create server socket.");
             throw SocketException ( "Could not create server socket." );
         }
-        
+
         if ( ! serverSock.bind(m_config.port))
         {
             HHLOG("Could not bind to port.");
             throw SocketException ( "Could not bind to port." );
         }
-        
+
         if ( ! serverSock.listen() )
         {
             HHLOG("Could not listen to socket.");
@@ -44,28 +44,28 @@ Config Server::getConfig(){
 
 /*
 	AcceptAndDispatch();
- 
+
 	Main loop:
  Blocks at accept(), until a new connection arrives.
  When it happens, create a new thread to handle the new client.
  */
 void Server::AcceptAndDispatch() {
-    
+
     //开启工作线程
     HHThread *worker_thread = new HHThread();
     worker_thread->Create((void *) Server::WorkThreadProc, this);
-    
+
     Client *client;
     HHThread *client_thread;
 
     while(1) {
-        
+
         client = new Client();
         client_thread = new HHThread();
-        
+
         //block here waiting for client;
         bool ret = serverSock.accept(client->sock);
-        
+
         if(ret == false) {
             HHLOG("Error on accept");
             exit(0);
@@ -83,24 +83,25 @@ void *Server::HandleClient(void *args) {
     char buffer[256-25];
     int index;
     int n;
-    
+
     //Add client in Static clients <vector> (Critical section!)
     HHThread::LockMutex((const char *) client->name);
-    
+
     //Before adding the new client, calculate its id. (Now we have the lock)
     client->SetId((int)Server::clients.size());
     sprintf(buffer, "Client n.%d", client->id);
     client->SetName(buffer);
     cout << "Adding client with id: " << client->id << endl;
     Server::clients.push_back(*client);
-    
+
     HHThread::UnlockMutex((const char *) client->name);
-    
+
     while(1)
     {
+        cout << "client->sock.recv"<< endl;
         memset(buffer, 0, sizeof buffer);
         n = client->sock.recv(buffer, sizeof buffer);
-
+        cout << "n: " << n << endl;
         //Client disconnected?
         if(n == 0) {
             cout << "Client " << client->name << " diconnected" << endl;
@@ -123,7 +124,7 @@ void *Server::HandleClient(void *args) {
             HHLOG2("Error while receiving message from client: %s", client->name);
         }
     }
-    
+
     //End thread
     return NULL;
 }
@@ -134,21 +135,21 @@ bool Server::SendPacket(Client &client, int packet_index,
     int headerSize = sizeof(HHHeader);
     int msgSize= msg.ByteSize();
     int packetSize = headerSize + msgSize;
-    
+
     cout << " send to:" << "Client " << client.name << endl;
     cout << "packetSize: " << packetSize << endl;
     cout << "msgSize: " << msgSize << endl;
 
     char msgBuff[msgSize];
     msg.SerializeToArray(msgBuff,msgSize);
-   
+
     // packet
     char packetBuff[packetSize];
     //头信息
     memcpy(packetBuff, &header, headerSize);
     //msg 信息
     memcpy(packetBuff + headerSize, msgBuff, msgSize);
-    
+
     //TODO: 分小块发送
     if(!client.sock.is_valid()){
         HHLOG("invalid client socket >>>>>>");
@@ -180,7 +181,7 @@ void Server::SendToAll(int packet_index, AlarmInfo info) {
 
         sleep(1);
     }
-    
+
     //Release the lock
     HHThread::UnlockMutex("'SendToAll()'");
 }
@@ -213,13 +214,13 @@ void *Server::WorkThreadProc(void *args) {
             char sql[256];
             sprintf(sql, "SELECT id, obj_type, timestamp, x, y, w, h,start_timestamp, end_timestamp, credibility, \
                              alarm_pic, alarm_vid, src_image FROM t_alarminfo WHERE image_id = %d", image_id);
-            
+
             sqlite3pp::query qry(db, sql);
             for (auto v : qry) {
                 int id, obj_type, timestamp, x, y, w, h, start_timestamp, end_timestamp;
                 float credibility;
                 string alarm_pic, alarm_vid, src_image;
-                
+
                 v.getter() >> id >> obj_type >> timestamp >> x >> y >> w
                 >> h >> start_timestamp >> end_timestamp >> credibility
                 >> alarm_pic >> alarm_vid >> src_image;
@@ -227,7 +228,7 @@ void *Server::WorkThreadProc(void *args) {
                 if(send == 1){
                     continue;
                 }
-                
+
                 cout << "image_id = " << image_id << endl;
                 cout << "id = " << id << endl;
                 cout << "obj_type = " <<obj_type << endl;
@@ -253,7 +254,7 @@ void *Server::WorkThreadProc(void *args) {
                 //If you really need it in a string you can initialize it the same way as the vector
                 std::string alarm_image_data = std::string(std::istreambuf_iterator<char>(ifs_alarm), std::istreambuf_iterator<char>());
                 ifs_alarm.close();
-    
+
                 // send alarm
                 AlarmInfo info;
                 info.set_image_id(image_id);
@@ -270,11 +271,11 @@ void *Server::WorkThreadProc(void *args) {
                 info.set_start_timestamp(start_timestamp);
                 info.set_end_timestamp(end_timestamp);
                 info.set_credibility(credibility);
-                
+
                 info.set_alarm_vid("");
                 info.set_src_image("");
                 info.set_alarm_pic(alarm_image_data);
-                
+
                 Server::SendToAll(packet_index, info);
                 packet_index++;
             }

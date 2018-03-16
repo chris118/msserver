@@ -36,17 +36,18 @@ public:
     ~HHClientImpl(){
         if(task){
             delete task;
+            task = NULL;
+        }
+        if(socket){
+            delete socket;
+            socket = NULL;
         }
     }
 
     HHResult Login(string ip, int port) {
 
-      if(task == NULL){
-          task = new HHAlarmTask(m_callback);
-      }
-      if(socket == NULL){
-        socket = new Socket();
-      }
+      task = new HHAlarmTask(m_callback);
+      socket = new Socket();
         //try to connect server
         if ( ! socket->create() )
         {
@@ -66,8 +67,7 @@ public:
 
     int Logout(){
       if(task){
-          delete task;
-          task = NULL;
+          task->stop();
       }
       if(socket){
           delete socket;

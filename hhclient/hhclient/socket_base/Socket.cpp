@@ -23,7 +23,9 @@ Socket::Socket() :
 Socket::~Socket()
 {
   if ( is_valid() )
-    ::close ( m_sock );
+    printf("socket close!\n");
+    //::close ( m_sock );
+    ::shutdown(m_sock, 2);
 }
 
 bool Socket::create()
@@ -164,13 +166,13 @@ int Socket::recv ( std::string& s ) const
 bool Socket::recv ( void* data, int size) const
 {
     char buf [ MAXRECV + 1 ];
-    
+
     memset ( buf, 0, MAXRECV + 1 );
-    
+
     //int status = ::recv ( m_sock, buf, MAXRECV, 0 );
     int status = ::recv ( m_sock, buf, size, MSG_WAITALL );
 
-    
+
     if ( status == -1 )
     {
         std::cout << "status == -1   errno == " << errno << "  in Socket::recv\n";

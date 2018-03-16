@@ -41,7 +41,7 @@ public:
 
     virtual int run(){
         m_callback = (HHlientCallback * )arg_;
-        while (true) {
+        while (!m_stop && m_socket) {
             try {
                 //收消息头
                 HHHeader header;
@@ -49,7 +49,7 @@ public:
 
                 cout << "flag:" << header.flag << " seq: " << header.seq <<  " length: " << header.msg_length << endl;
                 if(header.flag != 0xffff){
-                    HHLOG("bad package, continue");
+                    HHLOG("bad package");
                     break;
                 }
 
@@ -141,11 +141,17 @@ public:
             sleep(2);
         }
 
+        cout << "task is over" << endl;
+
         return 1;
     }
 
     void setSocket(Socket *socket){
         m_socket = socket;
+    }
+
+    void stop(){
+        m_stop = true;
     }
 
     ~HHAlarmTask(){
@@ -188,7 +194,7 @@ private:
 private:
     HHlientCallback * m_callback;
     Socket* m_socket;
-
     int m_packet_index = 0;
+    bool m_stop;
 
 };

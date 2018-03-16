@@ -5,10 +5,17 @@
 //  Created by xiaopeng on 16/9/5.
 //  Copyright © 2016年 hh. All rights reserved.
 //
-#include <iostream>
 #include <fstream>
-#include <string>
-#include <stdlib.h> 
+#include <stdlib.h>
+#include <iostream>
+#include <stdio.h>
+#include <unistd.h>
+#include <string.h>
+#include <sys/time.h>
+#include <errno.h>
+#include <vector>
+#include <pthread.h>
+#include <signal.h>
 #include "HHClient.hpp"
 
 using namespace std;
@@ -17,7 +24,7 @@ using namespace hhclient;
 class HHCallback: public HHlientCallback{
     void onAlarm(const HHAlarm &alarm) {
         cout << "-----------------onAlarm----------------------- " << endl;
-        
+
         cout << "image_id " << alarm.image_id << endl;
         cout << "image_width " << alarm.image_width << endl;
         cout << "image_height " << alarm.image_height << endl;
@@ -32,7 +39,7 @@ class HHCallback: public HHlientCallback{
         cout << "end " << alarm.end_timestamp << endl;
         cout << "credibility " << alarm.credibility << endl;
 
-        
+
         //save alarm image
         if(alarm.alarm_pic_size > 1){
             char buffer_alarm[256];
@@ -58,21 +65,25 @@ class HHCallback: public HHlientCallback{
 
 int main(int argc, const char * argv[])
 {
-    
-    HHCallback *callback = new HHCallback();
-    
-    HHClientAPI* client = HHClientAPI_Create(callback);
-    HHResult ret = client->Login("127.0.0.1", 30666);
-    if(ret != OK){
-        cout << "login error" << endl;
+    for(int i = 0; i < 20; i++){
+      HHCallback *callback = new HHCallback();
+
+      HHClientAPI* client = HHClientAPI_Create(callback);
+      HHResult ret = client->Login("127.0.0.1", 30666);
+      if(ret != OK){
+          cout << "login error" << endl;
+      }
+
+      HHClient_Destroy(client);
+      sleep(1);
     }
-    
+
+
+
     printf("input 'q' to quit\n");
     char c;
     scanf("%c", &c);
-    
-    HHClient_Destroy(client);
-    
+
+
     return 0;
 }
-

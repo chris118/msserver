@@ -1,0 +1,374 @@
+[03-16 16:42:28.034]bad package
+[03-16 16:43:54.317]HHClientImpl
+[03-16 16:43:54.317]Login
+[03-16 16:43:55.318]HHClientImpl
+[03-16 16:43:55.318]Login
+[03-16 16:44:37.764]HHClientImpl
+[03-16 16:44:37.764]Login
+[03-16 16:44:37.764]Login 2
+[03-16 16:44:37.764]Login3
+[03-16 16:44:37.764]Login 4
+[03-16 16:44:37.764]Login 5
+[03-16 16:44:38.764]HHClientImpl
+[03-16 16:44:38.764]Login
+[03-16 16:44:38.764]Login 2
+[03-16 16:44:38.764]Login3
+[03-16 16:46:57.010]HHClientImpl
+[03-16 16:46:57.011]Login
+[03-16 16:46:57.011]Login 2
+[03-16 16:46:57.011]Login3
+[03-16 16:46:57.011]Login 4
+[03-16 16:46:57.011]Login 5
+[03-16 16:46:58.011]HHClientImpl
+[03-16 16:46:58.011]Login
+[03-16 16:46:58.011]Login 2
+[03-16 16:46:58.011]Login3
+[03-16 16:47:25.056]HHClientImpl
+[03-16 16:47:25.056]Login
+[03-16 16:47:25.056]Login 2
+[03-16 16:47:25.056]Login3
+[03-16 16:47:25.056]Login 4
+[03-16 16:47:25.056]Login 5
+[03-16 16:47:26.057]HHClientImpl
+[03-16 16:47:26.057]Login
+[03-16 16:47:26.057]Login 2
+[03-16 16:47:26.057]Login3
+[03-16 16:48:51.043]HHClientImpl
+[03-16 16:48:51.043]Login
+[03-16 16:48:51.043]Login 2
+[03-16 16:48:51.043]Login3
+[03-16 16:48:51.043]Login 4
+[03-16 16:48:51.043]Login 5
+[03-16 16:48:52.044]HHClientImpl
+[03-16 16:48:52.044]Login
+[03-16 16:48:52.044]Login 2
+[03-16 16:48:52.044]Login3
+[03-16 16:53:36.974]HHClientImpl
+[03-16 16:53:36.974]Login
+[03-16 16:53:36.974]Login 2
+[03-16 16:53:36.974]Login3
+[03-16 16:53:36.975]Login 4
+[03-16 16:53:36.975]Login 5
+[03-16 16:53:37.975]HHClientImpl
+[03-16 16:53:37.975]Login
+[03-16 16:53:37.975]Login 2
+[03-16 16:53:37.975]Login3
+[03-16 16:54:02.746]HHClientImpl
+[03-16 16:54:02.746]Login
+[03-16 16:54:02.746]Login 2
+[03-16 16:54:02.746]Login3
+[03-16 16:54:02.746]Login 4
+[03-16 16:54:02.746]Login 5
+[03-16 16:54:02.746]bad package
+[03-16 16:54:03.747]HHClientImpl
+[03-16 16:54:03.747]Login
+[03-16 16:54:03.747]Login 2
+[03-16 16:54:03.747]Login3
+[03-16 16:55:22.279]HHClientImpl
+[03-16 16:55:22.279]Login
+[03-16 16:55:22.280]Login 2
+[03-16 16:55:22.280]Login3
+[03-16 16:55:22.280]Login 4
+[03-16 16:55:23.280]HHClientImpl
+[03-16 16:55:23.280]Login
+[03-16 16:55:23.280]Login 2
+[03-16 16:55:23.280]Login3
+[03-16 16:55:25.305]HHClientImpl
+[03-16 16:55:25.305]Login
+[03-16 16:55:25.305]Login 2
+[03-16 16:55:25.306]Login3
+[03-16 16:55:25.306]Login 4
+[03-16 16:55:26.306]HHClientImpl
+[03-16 16:55:26.306]Login
+[03-16 16:55:26.306]Login 2
+[03-16 16:55:26.306]Login3
+[03-16 16:57:31.029]HHClientImpl
+[03-16 16:57:31.029]Login
+[03-16 16:57:31.029]Login 2
+[03-16 16:57:31.029]Login3
+[03-16 16:57:31.029]Login 4
+[03-16 16:57:32.030]HHClientImpl
+[03-16 16:57:32.030]Login
+[03-16 16:57:32.030]Login 2
+[03-16 16:57:32.030]Login3
+[03-16 17:01:52.914]HHClientImpl
+[03-16 17:01:52.914]Login
+[03-16 17:01:52.914]Login 2
+[03-16 17:01:52.914]Login3
+[03-16 17:01:52.914]Login 4
+[03-16 17:01:53.914]HHClientImpl
+[03-16 17:01:53.914]Login
+[03-16 17:01:53.914]Login 2
+[03-16 17:01:53.914]Login3
+[03-16 17:03:43.997]HHClientImpl
+[03-16 17:03:43.997]Login
+[03-16 17:03:43.997]Login 2
+[03-16 17:03:43.997]Login3
+[03-16 17:04:34.692]HHClientImpl
+[03-16 17:04:34.693]Login
+[03-16 17:04:34.693]Login 2
+[03-16 17:04:34.693]Login3
+[03-16 17:04:34.693]Login 4
+[03-16 17:04:35.693]HHClientImpl
+[03-16 17:04:35.693]Login
+[03-16 17:04:35.693]Login 2
+[03-16 17:04:35.693]Login3
+[03-16 17:05:07.917]HHClientImpl
+[03-16 17:05:07.917]Login
+[03-16 17:05:07.917]Login 2
+[03-16 17:05:07.917]Login3
+[03-16 17:05:07.917]Login 4
+[03-16 17:05:08.917]HHClientImpl
+[03-16 17:05:08.918]Login
+[03-16 17:05:08.918]Login 2
+[03-16 17:05:08.918]Login3
+[03-16 17:07:02.382]HHClientImpl
+[03-16 17:07:02.382]Login
+[03-16 17:07:02.382]Login 2
+[03-16 17:07:02.382]Login3
+[03-16 17:07:02.382]Login 4
+[03-16 17:07:03.382]HHClientImpl
+[03-16 17:07:03.382]Login
+[03-16 17:07:03.382]Login 2
+[03-16 17:07:03.382]Login3
+[03-16 17:08:32.645]HHClientImpl
+[03-16 17:08:32.646]Login
+[03-16 17:08:32.646]Login 2
+[03-16 17:08:32.646]Login3
+[03-16 17:08:32.646]Login 4
+[03-16 17:08:33.646]HHClientImpl
+[03-16 17:08:33.646]Login
+[03-16 17:08:33.646]Login 2
+[03-16 17:08:33.646]Login3
+[03-16 17:09:10.175]HHClientImpl
+[03-16 17:09:10.175]Login
+[03-16 17:09:10.175]Login 2
+[03-16 17:09:10.175]Login3
+[03-16 17:09:10.175]Login 4
+[03-16 17:09:11.176]HHClientImpl
+[03-16 17:09:11.176]Login
+[03-16 17:09:11.176]Login 2
+[03-16 17:09:11.176]Login3
+[03-16 17:11:25.159]HHClientImpl
+[03-16 17:11:25.160]Login
+[03-16 17:11:25.160]Login 2
+[03-16 17:11:25.160]socket == NULL
+[03-16 17:11:25.160]Login3
+[03-16 17:11:25.160]Login 4
+[03-16 17:11:26.160]HHClientImpl
+[03-16 17:11:26.160]Login
+[03-16 17:11:26.160]Login 2
+[03-16 17:11:26.160]Login3
+[03-16 17:12:08.269]HHClientImpl
+[03-16 17:12:08.269]Login
+[03-16 17:12:08.270]Login 2
+[03-16 17:12:08.270]socket == NULL
+[03-16 17:12:08.270]Login3
+[03-16 17:12:08.270]Login 4
+[03-16 17:12:08.270]delete socket
+[03-16 17:12:09.270]HHClientImpl
+[03-16 17:12:09.270]Login
+[03-16 17:12:09.270]Login 2
+[03-16 17:12:09.270]Login3
+[03-16 17:16:50.685]HHClientImpl
+[03-16 17:16:50.685]Login
+[03-16 17:16:50.685]Login 2
+[03-16 17:16:50.685]socket == NULL
+[03-16 17:16:50.685]Login3
+[03-16 17:16:50.685]Login 4
+[03-16 17:16:50.685]delete socket
+[03-16 17:16:51.686]HHClientImpl
+[03-16 17:16:51.686]Login
+[03-16 17:16:51.686]Login 2
+[03-16 17:16:51.686]Login3
+[03-16 17:18:57.188]HHClientImpl
+[03-16 17:18:57.188]Login
+[03-16 17:18:57.188]Login 2
+[03-16 17:18:57.188]socket == NULL
+[03-16 17:18:57.188]Login3
+[03-16 17:18:57.188]Login 4
+[03-16 17:18:57.188]delete socket
+[03-16 17:18:58.188]HHClientImpl
+[03-16 17:18:58.188]Login
+[03-16 17:18:58.188]Login 2
+[03-16 17:18:58.188]socket == NULL
+[03-16 17:18:58.188]Login3
+[03-16 17:18:58.188]Login 4
+[03-16 17:18:58.189]delete socket
+[03-16 17:18:59.189]HHClientImpl
+[03-16 17:18:59.189]Login
+[03-16 17:18:59.189]Login 2
+[03-16 17:18:59.189]socket == NULL
+[03-16 17:18:59.189]Login3
+[03-16 17:18:59.189]Login 4
+[03-16 17:18:59.189]delete socket
+[03-16 17:19:00.189]HHClientImpl
+[03-16 17:19:00.189]Login
+[03-16 17:19:00.189]Login 2
+[03-16 17:19:00.189]socket == NULL
+[03-16 17:19:00.190]Login3
+[03-16 17:19:00.190]Login 4
+[03-16 17:19:00.190]delete socket
+[03-16 17:19:01.190]HHClientImpl
+[03-16 17:19:01.190]Login
+[03-16 17:19:01.190]Login 2
+[03-16 17:19:01.190]socket == NULL
+[03-16 17:19:01.190]Login3
+[03-16 17:19:01.190]Login 4
+[03-16 17:19:01.190]delete socket
+[03-16 17:24:30.566]socket->create
+[03-16 17:24:30.567]socket->connect
+[03-16 17:24:31.567]socket->create
+[03-16 17:24:31.567]socket->connect
+[03-16 17:24:32.567]socket->create
+[03-16 17:24:32.567]socket->connect
+[03-16 17:24:33.568]socket->create
+[03-16 17:24:33.568]socket->connect
+[03-16 17:26:43.584]socket->create
+[03-16 17:26:43.584]socket->connect
+[03-16 17:26:44.584]socket->create
+[03-16 17:26:44.584]socket->connect
+[03-16 17:26:48.459]socket->create
+[03-16 17:26:48.459]socket->connect
+[03-16 17:26:48.459]socket->connect failed
+[03-16 17:26:48.459]Logout task->stop()
+[03-16 17:26:48.459]Logout delete socket;
+[03-16 17:26:49.460]socket->create
+[03-16 17:26:49.460]socket->connect
+[03-16 17:26:49.460]socket->connect failed
+[03-16 17:26:49.460]Logout task->stop()
+[03-16 17:26:49.460]Logout delete socket;
+[03-16 17:26:50.460]socket->create
+[03-16 17:26:50.460]socket->connect
+[03-16 17:26:50.460]socket->connect failed
+[03-16 17:26:50.460]Logout task->stop()
+[03-16 17:26:50.460]Logout delete socket;
+[03-16 17:26:51.460]socket->create
+[03-16 17:26:51.461]socket->connect
+[03-16 17:26:51.461]socket->connect failed
+[03-16 17:26:51.461]Logout task->stop()
+[03-16 17:27:39.511]socket->create
+[03-16 17:27:39.511]socket->connect
+[03-16 17:27:39.512]saddTask
+[03-16 17:27:39.512]Logout task->stop()
+[03-16 17:27:39.512]Logout delete socket;
+[03-16 17:27:39.512]bad package
+[03-16 17:27:40.512]socket->create
+[03-16 17:27:40.512]socket->connect
+[03-16 17:27:40.512]saddTask
+[03-16 17:27:40.512]Logout task->stop()
+[03-16 17:27:49.108]socket->create
+[03-16 17:27:49.108]socket->connect
+[03-16 17:27:49.108]saddTask
+[03-16 17:27:49.108]Logout task->stop()
+[03-16 17:27:49.108]Logout delete socket;
+[03-16 17:27:49.108]bad package
+[03-16 17:27:50.108]socket->create
+[03-16 17:27:50.109]socket->connect
+[03-16 17:27:50.109]saddTask
+[03-16 17:27:50.109]Logout task->stop()
+[03-16 17:27:57.254]socket->create
+[03-16 17:27:57.254]socket->connect
+[03-16 17:27:57.254]saddTask
+[03-16 17:27:57.254]Logout task->stop()
+[03-16 17:27:57.254]Logout delete socket;
+[03-16 17:27:57.254]bad package
+[03-16 17:27:58.254]socket->create
+[03-16 17:27:58.254]socket->connect
+[03-16 17:27:58.254]saddTask
+[03-16 17:27:58.254]Logout task->stop()
+[03-16 17:30:05.425]socket->create
+[03-16 17:30:05.425]socket->connect
+[03-16 17:30:05.425]saddTask
+[03-16 17:30:05.425]Logout task->stop()
+[03-16 17:30:05.425]Logout delete socket;
+[03-16 17:30:05.425]bad package
+[03-16 17:30:06.425]socket->create
+[03-16 17:30:06.425]socket->connect
+[03-16 17:30:06.426]saddTask
+[03-16 17:30:06.426]Logout task->stop()
+[03-16 17:30:46.041]socket->create
+[03-16 17:30:46.041]socket->connect
+[03-16 17:30:46.041]saddTask
+[03-16 17:30:46.041]Logout task->stop()
+[03-16 17:30:46.041]Logout delete socket;
+[03-16 17:30:46.041]bad package
+[03-16 17:30:47.041]socket->create
+[03-16 17:30:47.041]socket->connect
+[03-16 17:30:47.041]saddTask
+[03-16 17:30:47.042]Logout task->stop()
+[03-16 17:31:45.679]socket->create
+[03-16 17:31:45.679]socket->connect
+[03-16 17:31:45.679]saddTask
+[03-16 17:31:45.679]Logout task->stop()
+[03-16 17:31:45.679]Logout delete socket;
+[03-16 17:31:45.679]bad package
+[03-16 17:31:46.679]socket->create
+[03-16 17:31:46.679]socket->connect
+[03-16 17:31:46.679]saddTask
+[03-16 17:31:46.679]Logout task->stop()
+[03-16 17:31:46.679]Logout delete socket;
+[03-16 17:31:47.679]socket->create
+[03-16 17:31:47.680]socket->connect
+[03-16 17:31:47.680]saddTask
+[03-16 17:31:47.680]Logout task->stop()
+[03-16 17:33:19.140]socket->create
+[03-16 17:33:19.140]socket->connect
+[03-16 17:33:19.140]saddTask
+[03-16 17:33:19.140]Logout task->stop()
+[03-16 17:33:19.140]Logout delete socket;
+[03-16 17:33:19.140]bad package
+[03-16 17:33:20.140]socket->create
+[03-16 17:33:20.141]socket->connect
+[03-16 17:33:20.141]saddTask
+[03-16 17:33:20.141]Logout task->stop()
+[03-16 17:33:20.141]Logout delete socket;
+[03-16 17:33:20.141]bad package
+[03-16 17:33:21.141]socket->create
+[03-16 17:33:21.141]socket->connect
+[03-16 17:33:21.141]saddTask
+[03-16 17:33:21.141]Logout task->stop()
+[03-16 17:33:21.141]Logout delete socket;
+[03-16 17:33:21.141]bad package
+[03-16 17:33:22.141]socket->create
+[03-16 17:33:22.141]socket->connect
+[03-16 17:33:22.141]saddTask
+[03-16 17:33:22.142]Logout task->stop()
+[03-16 17:33:22.142]Logout delete socket;
+[03-16 17:33:22.142]bad package
+[03-16 17:33:23.142]socket->create
+[03-16 17:33:23.142]socket->connect
+[03-16 17:33:23.142]saddTask
+[03-16 17:33:23.142]Logout task->stop()
+[03-16 17:33:23.142]Logout delete socket;
+[03-16 17:33:23.142]bad package
+[03-16 17:35:07.790]bad package
+[03-16 17:35:08.791]bad package
+[03-16 17:35:09.791]bad package
+[03-16 17:35:10.791]bad package
+[03-16 17:35:12.792]bad package
+[03-16 17:35:13.792]bad package
+[03-16 17:35:15.793]bad package
+[03-16 17:35:17.794]bad package
+[03-16 17:35:19.794]bad package
+[03-16 17:35:21.795]bad package
+[03-16 17:35:22.795]bad package
+[03-16 17:35:23.796]bad package
+[03-16 17:35:24.796]bad package
+[03-16 17:35:25.796]bad package
+[03-16 17:36:44.907]bad package
+[03-16 17:36:45.907]bad package
+[03-16 17:36:46.908]bad package
+[03-16 17:36:47.908]bad package
+[03-16 17:36:48.909]bad package
+[03-16 17:36:54.910]bad package
+[03-16 17:36:55.911]bad package
+[03-16 17:36:56.911]bad package
+[03-16 17:36:59.912]bad package
+[03-16 17:37:00.913]bad package
+[03-16 17:37:01.913]bad package
+[03-16 17:37:03.914]bad package
+[03-16 17:56:22.820]bad package
+[03-16 17:56:25.820]bad package
+[03-16 17:56:26.821]bad package
+[03-16 17:56:27.821]bad package

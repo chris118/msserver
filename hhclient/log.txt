@@ -1,0 +1,51 @@
+[03-16 14:37:09.168]client logout
+[03-16 14:37:28.918]bad package, continue
+[03-16 14:37:40.128]client logout
+[03-16 14:37:55.962]bad package, continue
+[03-16 14:39:59.178]client logout
+[03-16 14:40:20.053]bad package, continue
+[03-16 14:45:01.711]client logout
+[03-16 14:45:01.711]bad package, continue
+[03-16 14:45:16.392]client logout
+[03-16 14:45:16.392]bad package, continue
+[03-16 14:45:33.688]client logout
+[03-16 14:45:33.688]bad package, continue
+[03-16 14:47:08.660]client logout
+[03-16 14:47:08.660]bad package, continue
+[03-16 14:48:29.505]client logout
+[03-16 14:53:57.958]client logout
+[03-16 14:54:06.641]bad package, continue
+[03-16 14:54:20.797]client logout
+[03-16 15:06:13.940]client logout
+[03-16 15:06:21.833]bad package, continue
+[03-16 15:07:40.123]client logout
+[03-16 15:07:53.243]bad package, continue
+[03-16 15:08:20.032]client logout
+[03-16 15:08:20.032]bad package, continue
+[03-16 15:08:31.839]client logout
+[03-16 15:08:31.839]bad package, continue
+[03-16 15:23:27.848]bad package, continue
+[03-16 15:24:18.574]bad package, continue
+[03-16 15:25:23.834]bad package, continue
+[03-16 15:26:29.076]bad package, continue
+[03-16 15:26:35.341]bad package, continue
+[03-16 15:30:11.141]bad package, continue
+[03-16 15:31:21.538]bad package, continue
+[03-16 15:32:27.695]bad package, continue
+[03-16 15:34:31.554]bad package
+[03-16 15:37:03.181]bad package
+[03-16 15:37:42.662]bad package
+[03-16 15:38:38.027]bad package
+[03-16 15:38:50.099]bad package
+[03-16 15:40:37.089]bad package
+[03-16 16:10:50.495]bad package
+[03-16 16:40:26.381]bad package
+[03-16 17:00:43.556]HHClientImpl
+[03-16 17:00:43.557]Login
+[03-16 17:00:43.557]Login 2
+[03-16 17:00:43.557]Login3
+[03-16 17:00:43.557]Login 4
+[03-16 17:00:48.557]HHClientImpl
+[03-16 17:00:48.557]Login
+[03-16 17:00:48.557]Login 2
+[03-16 17:00:48.557]Login3
