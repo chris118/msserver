@@ -49,8 +49,6 @@ core/ThreadPool.h
 /usr/local/hhit/detection/msserver/hhclient/hhclient/core/ThreadPool.h
 core/HHLog.hpp
 /usr/local/hhit/detection/msserver/hhclient/hhclient/core/HHLog.hpp
-core/HHLog.hpp
-/usr/local/hhit/detection/msserver/hhclient/hhclient/core/HHLog.hpp
 core/Util.hpp
 /usr/local/hhit/detection/msserver/hhclient/hhclient/core/Util.hpp
 socket_base/Socket.h
@@ -109,6 +107,8 @@ HHClient.hpp
 /usr/local/hhit/detection/msserver/hhclient/hhclient/HHClient.hpp
 core/ThreadPool.h
 /usr/local/hhit/detection/msserver/hhclient/hhclient/core/ThreadPool.h
+core/HHLog.hpp
+/usr/local/hhit/detection/msserver/hhclient/hhclient/core/HHLog.hpp
 HHAlarmTask.hpp
 /usr/local/hhit/detection/msserver/hhclient/hhclient/HHAlarmTask.hpp
 

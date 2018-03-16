@@ -19,6 +19,7 @@
 #include <unistd.h>
 #include "HHClient.hpp"
 #include "core/ThreadPool.h"
+#include "core/HHLog.hpp"
 #include "HHAlarmTask.hpp"
 
 using namespace hhclient;
@@ -26,42 +27,57 @@ using namespace std;
 
 
 class HHClientImpl: public HHClientAPI {
-    
+
 public:
     HHClientImpl(HHlientCallback * callback) {
         m_callback = callback;
-        task = new HHAlarmTask(callback);
-        task->setArg(m_callback);
     }
-    
+
     ~HHClientImpl(){
         if(task){
             delete task;
         }
     }
-    
+
     HHResult Login(string ip, int port) {
 
+      if(task == NULL){
+          task = new HHAlarmTask(m_callback);
+      }
+      if(socket == NULL){
+        socket = new Socket();
+      }
         //try to connect server
-        if ( ! socket.create() )
+        if ( ! socket->create() )
         {
             return NET_ERROR;
         }
-        
-        if ( ! socket.connect ( ip, port ) )
+
+        if ( ! socket->connect ( ip, port ) )
         {
             return NET_ERROR;
         }
-        
+
         task->setSocket(socket);
         thread_pool.addTask(task);
-    
+
         return OK;
     }
-    
+
+    int Logout(){
+      if(task){
+          delete task;
+          task = NULL;
+      }
+      if(socket){
+          delete socket;
+          socket = NULL;
+      }
+    }
+
 private:
     ThreadPool thread_pool;
     HHAlarmTask *task;
     HHlientCallback * m_callback;
-    Socket socket;
+    Socket* socket;
 };

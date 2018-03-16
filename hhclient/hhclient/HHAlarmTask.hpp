@@ -21,7 +21,6 @@
 
 #include "core/ThreadPool.h"
 #include "core/HHLog.hpp"
-#include "core/HHLog.hpp"
 #include "core/Util.hpp"
 #include "socket_base/Socket.h"
 #include "socket_base/SocketException.h"
@@ -46,18 +45,18 @@ public:
             try {
                 //收消息头
                 HHHeader header;
-                m_socket.recv(&header, sizeof(header));
+                m_socket->recv(&header, sizeof(header));
 
                 cout << "flag:" << header.flag << " seq: " << header.seq <<  " length: " << header.msg_length << endl;
                 if(header.flag != 0xffff){
                     HHLOG("bad package, continue");
                     break;
                 }
-                
+
                 //收消息体
                 int messageSize = header.msg_length;
                 char protoMsgBuf[messageSize];
-                
+
                 //分小块收取
                 if(messageSize > MAXRECV){
                     int left_length = messageSize;
@@ -67,23 +66,23 @@ public:
                     while (left_length > 0) {
                         if(left_length > TRUNK_SIZE){
                             char buf[TRUNK_SIZE];
-                            m_socket.recv(buf, TRUNK_SIZE);
+                            m_socket->recv(buf, TRUNK_SIZE);
                             memcpy(protoMsgBuf + read_length, buf, TRUNK_SIZE);
                             read_length += TRUNK_SIZE;
                             left_length -= TRUNK_SIZE;
                         }else{
                             char buf[left_length];
-                            m_socket.recv(buf, left_length);
+                            m_socket->recv(buf, left_length);
                             memcpy(protoMsgBuf + read_length, buf, left_length);
                             left_length = 0;
                         }
                     }
                 }else{
                     char buf[messageSize];
-                    m_socket.recv(buf, messageSize);
+                    m_socket->recv(buf, messageSize);
                     memcpy(protoMsgBuf, buf, messageSize);
                 }
-                
+
                 //反序列化
                 const ::google::protobuf::Descriptor*descriptor =AlarmInfo::descriptor();
                 const google::protobuf::Message* prototype = google::protobuf::MessageFactory::generated_factory()->GetPrototype(descriptor);
@@ -93,9 +92,9 @@ public:
                 {
                     HHLOG("Deserialize error");
                 }
-                
+
                 AlarmInfo *alarm_info = static_cast<class AlarmInfo*>(msgProtobuf) ;
-                
+
 //                cout << "id = " << alarm_info->id() << endl;
 //                cout << "obj_type = " <<alarm_info->obj_type() << endl;
 //                cout << "timestamp = " << alarm_info->timestamp() << endl;
@@ -122,7 +121,7 @@ public:
                     alarm.image_id = alarm_info->image_id();
                     alarm.image_width = alarm_info->image_width();
                     alarm.image_height = alarm_info->image_height();
-                    
+
                     // alarm image
                     string alarm_pic = alarm_info->alarm_pic();
                     alarm.alarm_pic = (char*)alarm_pic.c_str();
@@ -137,59 +136,59 @@ public:
                 }
 
             } catch (...) {
-                
+
             }
             sleep(2);
         }
-        
+
         return 1;
     }
-    
-    void setSocket(Socket &socket){
+
+    void setSocket(Socket *socket){
         m_socket = socket;
     }
-    
+
     ~HHAlarmTask(){
-   
+
     }
-    
+
 private:
     bool send_packet(Socket& socket, int packet_index,
                      google::protobuf::Message &msg){
-        
+
         HHHeader header;
         header.flag = 0xffff;
         header.seq = packet_index;
         header.msg_length = msg.ByteSize();//Message的字节数
         header.type = 1;
         header.reserved = 0;
-        
+
         int headerSize = sizeof(HHHeader);
         int msgSize= msg.ByteSize();
         int packetSize = headerSize + msgSize;
-        
+
         char msgBuff[msgSize];
         msg.SerializeToArray(msgBuff,msgSize);
-        
+
         // packet
         char packetBuff[packetSize];
         //头信息
         memcpy(packetBuff, &header, headerSize);
         //msg 信息
         memcpy(packetBuff + headerSize, msgBuff, msgSize);
-        
+
         bool ret = socket.send(packetBuff, packetSize);
         if(!ret){
             cout << "socket send error !" << endl;
         }
-        
+
         return ret;
     }
-    
+
 private:
     HHlientCallback * m_callback;
-    Socket m_socket;
+    Socket* m_socket;
 
     int m_packet_index = 0;
-    
+
 };

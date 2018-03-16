@@ -18,6 +18,5 @@ HHClientAPI* hhclient::HHClientAPI_Create(HHlientCallback * callback){
 
 void hhclient::HHClient_Destroy(HHClientAPI* client) {
     cout << "client destroy !!" << endl;
+    ((HHClientImpl*)client)->Logout();
 }
-
-
