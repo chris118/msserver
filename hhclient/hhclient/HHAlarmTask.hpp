@@ -40,7 +40,7 @@ public:
     }
 
     virtual int run(){
-        m_callback = (HHlientCallback * )arg_;
+        // m_callback = (HHlientCallback * )arg_;
         while (!m_stop && m_socket) {
             try {
                 //收消息头
@@ -95,18 +95,19 @@ public:
 
                 AlarmInfo *alarm_info = static_cast<class AlarmInfo*>(msgProtobuf) ;
 
-//                cout << "id = " << alarm_info->id() << endl;
-//                cout << "obj_type = " <<alarm_info->obj_type() << endl;
-//                cout << "timestamp = " << alarm_info->timestamp() << endl;
-//                cout << "x = " << alarm_info->x() << endl;
-//                cout << "y = " << alarm_info->y() << endl;
-//                cout << "w = " << alarm_info->w() << endl;
-//                cout << "h = " << alarm_info->h() << endl;
-//                cout << "start_timestamp = " << alarm_info->start_timestamp() << endl;
-//                cout << "end_timestamp = " << alarm_info->end_timestamp() << endl;
+            //    cout << "id = " << alarm_info->id() << endl;
+            //    cout << "obj_type = " <<alarm_info->obj_type() << endl;
+            //    cout << "timestamp = " << alarm_info->timestamp() << endl;
+            //    cout << "x = " << alarm_info->x() << endl;
+            //    cout << "y = " << alarm_info->y() << endl;
+            //    cout << "w = " << alarm_info->w() << endl;
+            //    cout << "h = " << alarm_info->h() << endl;
+            //    cout << "start_timestamp = " << alarm_info->start_timestamp() << endl;
+            //    cout << "end_timestamp = " << alarm_info->end_timestamp() << endl;
             //    cout << "credibility = " << alarm_info->credibility() << endl;
-//
+
                 if(m_callback){
+                    cout << "call back" << endl;
                     HHAlarm alarm;
                     alarm.id = alarm_info->id();
                     alarm.car_type = (HHCarType)alarm_info->obj_type();

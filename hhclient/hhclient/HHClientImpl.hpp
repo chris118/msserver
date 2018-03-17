@@ -48,6 +48,7 @@ public:
 
       task = new HHAlarmTask(m_callback);
       socket = new Socket();
+    //   socket->set_non_blocking(true);
         //try to connect server
         if ( ! socket->create() )
         {

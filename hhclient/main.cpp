@@ -65,20 +65,26 @@ class HHCallback: public HHlientCallback{
 
 int main(int argc, const char * argv[])
 {
-    for(int i = 0; i < 20; i++){
-      HHCallback *callback = new HHCallback();
+    // for(int i = 0; i < 20; i++){
+    //   HHCallback *callback = new HHCallback();
+
+    //   HHClientAPI* client = HHClientAPI_Create(callback);
+    //   HHResult ret = client->Login("127.0.0.1", 30666);
+    //   if(ret != OK){
+    //       cout << "login error" << endl;
+    //   }
+
+    //   HHClient_Destroy(client);
+    //   sleep(1);
+    // }
+
+     HHCallback *callback = new HHCallback();
 
       HHClientAPI* client = HHClientAPI_Create(callback);
       HHResult ret = client->Login("127.0.0.1", 30666);
       if(ret != OK){
           cout << "login error" << endl;
       }
-
-      HHClient_Destroy(client);
-      sleep(1);
-    }
-
-
 
     printf("input 'q' to quit\n");
     char c;

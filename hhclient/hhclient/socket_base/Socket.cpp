@@ -197,17 +197,107 @@ bool Socket::connect ( const std::string host, const int port )
   m_addr.sin_family = AF_INET;
   m_addr.sin_port = htons ( port );
 
-  int status = inet_pton ( AF_INET, host.c_str(), &m_addr.sin_addr );
+  int flags = inet_pton ( AF_INET, host.c_str(), &m_addr.sin_addr );
 
   if ( errno == EAFNOSUPPORT ) return false;
 
-  status = ::connect ( m_sock, ( sockaddr * ) &m_addr, sizeof ( m_addr ) );
+  int status = ::connect ( m_sock, ( sockaddr * ) &m_addr, sizeof ( m_addr ) );
 
   if ( status == 0 )
     return true;
   else
     return false;
+
+    // sigset(SIGALRM, u_alarm_handler);
+    // alarm(5);
+    // int status = ::connect ( m_sock, ( sockaddr * ) &m_addr, sizeof ( m_addr ) );
+    // alarm(0);
+    // sigrelse(SIGALRM);
+
+    // fd_set fdr, fdw;
+    // struct timeval timeout;
+    // int err = 0;
+    // int errlen = sizeof(err);
+
+    //  /*设置套接字为非阻塞*/
+    // flags = fcntl(m_sock, F_GETFL, 0);
+    // if (flags < 0) {
+    //     fprintf(stderr, "Get flags error:%s\n", strerror(errno));
+    //     close(m_sock);
+    //     return false;
+    // }
+    // flags |= O_NONBLOCK;
+    // if (fcntl(m_sock, F_SETFL, flags) < 0) {
+    //     fprintf(stderr, "Set flags error:%s\n", strerror(errno));
+    //     close(m_sock);
+    //     return false;
+    // }
+
+    // /*阻塞情况下linux系统默认超时时间为75s*/
+    //   int rc = ::connect ( m_sock, ( sockaddr * ) &m_addr, sizeof ( m_addr ) );
+
+    // // int rc = connect(m_sock, (struct sockaddr*)&m_addr, sizeof(m_addr));
+    // if (rc != 0) {
+    //     if (errno == EINPROGRESS) {
+    //         printf("Doing connection.\n");
+    //         /*正在处理连接*/
+    //         FD_ZERO(&fdr);
+    //         FD_ZERO(&fdw);
+    //         FD_SET(m_sock, &fdr);
+    //         FD_SET(m_sock, &fdw);
+    //         timeout.tv_sec = 10;
+    //         timeout.tv_usec = 0;
+    //         rc = select(m_sock + 1, &fdr, &fdw, NULL, &timeout);
+    //         printf("rc is: %d\n", rc);
+    //         /*select调用失败*/
+    //         if (rc < 0) {
+    //             fprintf(stderr, "connect error:%s\n", strerror(errno));
+    //             close(m_sock);
+    //             return false;
+    //         }
+            
+    //         /*连接超时*/
+    //         if (rc == 0) {
+    //             fprintf(stderr, "Connect timeout.\n");
+    //             close(m_sock);
+    //             return false;
+    //         }
+    //         /*[1] 当连接成功建立时，描述符变成可写,rc=1*/
+    //         if (rc == 1 && FD_ISSET(m_sock, &fdw)) {
+    //             printf("Connect success\n");
+    //             close(m_sock);
+    //             return true;
+    //         }
+    //         /*[2] 当连接建立遇到错误时，描述符变为即可读，也可写，rc=2 遇到这种情况，可调用getsockopt函数*/
+    //         if (rc == 2) {
+    //             if (getsockopt(m_sock, SOL_SOCKET, SO_ERROR, &err, (socklen_t*)(&errlen)) == -1) {
+    //                 fprintf(stderr, "getsockopt(SO_ERROR): %s", strerror(errno));
+    //                 close(m_sock);
+    //                 return false;
+
+    //             }
+
+    //             if (err) {
+    //                 errno = err;
+    //                 fprintf(stderr, "connect error:%s\n", strerror(errno));
+    //                 close(m_sock);
+    //                 return false;
+
+    //             }
+    //         }
+
+    //     } 
+    //     fprintf(stderr, "connect failed, error:%s.\n", strerror(errno));
+    //     return -1;
+    // } 
+
+    // return true;
+   
 }
+
+// void u_alarm_handler()
+// {
+// }
 
 void Socket::set_non_blocking ( const bool b )
 {
