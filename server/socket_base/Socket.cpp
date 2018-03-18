@@ -121,15 +121,15 @@ bool Socket::send ( const std::string s ) const
 }
 
 bool Socket::send ( void* data, int size) const{
-
     int status = ::send ( m_sock, data, size, MSG_NOSIGNAL );
     if ( status == -1 )
     {
-        std::cout << "send: " << "status == -1   errno == " << errno << "  in Socket::send\n";
+        std::cout << "Socket::send " << "fd == " << m_sock << " status == -1   errno == " << errno << std::endl;
         return false;
     }
     else
     {
+        std::cout << "Socket::send " <<  "fd == " << m_sock << " success" << std::endl;
         return true;
     }
 }
@@ -209,7 +209,6 @@ bool Socket::connect ( const std::string host, const int port )
 }
 
 bool Socket::is_valid() const{
-    std::cout << "is_valid: " << m_sock << std::endl;
     return m_sock != -1;
 }
 

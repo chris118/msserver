@@ -178,6 +178,8 @@ void Server::SendToAll(int packet_index, AlarmInfo info) {
     //Acquire the lock
     HHThread::LockMutex("'SendToAll()'");
     HHPRINT2("total client number ", clients.size());
+    HHPRINT2("seq ", packet_index);
+
     for(size_t i=0; i<clients.size(); i++) {
         HHHeader header;
         header.flag = 0xffff;

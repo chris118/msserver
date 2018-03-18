@@ -15,7 +15,7 @@
 
 const int MAXHOSTNAME = 200;
 const int MAXCONNECTIONS = 5;
-const int MAXRECV = 500;
+const int MAXRECV = 20;
 
 #ifdef __APPLE__
 #	define MSG_NOSIGNAL 0
@@ -46,7 +46,8 @@ class Socket
 
 
   void set_non_blocking ( const bool );
-    bool is_valid() const;
+
+  bool is_valid() const;
 
  private:
 
