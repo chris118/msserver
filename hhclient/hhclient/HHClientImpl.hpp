@@ -46,7 +46,6 @@ public:
 
     HHResult Login(string ip, int port) {
 
-      task = new HHAlarmTask(m_callback);
       socket = new Socket();
     //   socket->set_non_blocking(true);
         //try to connect server
@@ -59,8 +58,9 @@ public:
         {
             return NET_ERROR;
         }
-
-        task->setSocket(socket);
+        
+        task = new HHAlarmTask(m_callback);
+        task->setSocket(socket,ip, port);
         thread_pool.addTask(task);
 
         return OK;
@@ -71,10 +71,12 @@ public:
           task->stop();
       }
       if(socket){
-          delete socket;
-          socket = NULL;
+          socket->close();
       }
+        
+        return 0;
     }
+    
 
 private:
     ThreadPool thread_pool;

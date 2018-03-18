@@ -48,8 +48,6 @@ bool Socket::create()
 
 }
 
-
-
 bool Socket::bind ( const int port )
 {
 
@@ -298,6 +296,13 @@ bool Socket::connect ( const std::string host, const int port )
 // void u_alarm_handler()
 // {
 // }
+
+void Socket::close()
+{
+    std::cout << "socket close >>>>>>>>>>" << std::endl;
+    //    ::close(m_sock);
+    ::shutdown(m_sock, 2);
+}
 
 void Socket::set_non_blocking ( const bool b )
 {

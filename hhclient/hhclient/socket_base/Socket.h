@@ -41,7 +41,7 @@ class Socket
   int recv ( std::string& ) const;
   bool send ( void* data, int size ) const;
   bool recv ( void* data, int size) const;
-
+  void close ();
 
 
   void set_non_blocking ( const bool );
