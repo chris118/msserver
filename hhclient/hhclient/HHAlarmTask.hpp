@@ -47,6 +47,10 @@ public:
     }
     
     HHResult reconnect(){
+        if(m_socket->is_valid()){
+            m_socket->close();
+        }
+
         if ( ! m_socket->create() )
         {
             return NET_ERROR;
@@ -81,8 +85,9 @@ public:
                 
                 cout << "------------"<< "flag:" << header.flag<< " seq: " << header.seq<<  " length: "<< header.msg_length<< "------------"<< endl;
                 if(header.flag != 0xffff){
-                    HHLOG("bad package");
-                    break;
+                    HHLOG("bad package! try to reconnect");
+                    reconnect();
+                    continue;
                 }
                 
                 //收消息体
@@ -123,7 +128,6 @@ public:
                 if (ret == false)
                 {
                     HHLOG("Deserialize error");
-                    m_socket->close();
                     if(reconnect() != OK){
                     }
                 }
