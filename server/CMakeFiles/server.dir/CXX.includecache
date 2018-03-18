@@ -6,20 +6,6 @@
 
 #IncludeRegexTransform: 
 
-./db/sqlite3pp.h
-functional
--
-iterator
--
-sqlite3.h
--
-stdexcept
--
-string
--
-tuple
--
-
 ./protobuf/alarm.pb.h
 string
 -
@@ -235,8 +221,8 @@ google/protobuf/unknown_field_set.h
 /usr/local/hhit/detection/msserver/server/server.cpp
 server.h
 /usr/local/hhit/detection/msserver/server/server.h
-../db/sqlite3pp.h
-/usr/local/hhit/detection/msserver/db/sqlite3pp.h
+db/sqlite3pp.h
+/usr/local/hhit/detection/msserver/server/db/sqlite3pp.h
 
 /usr/local/hhit/detection/msserver/server/server.h
 iostream

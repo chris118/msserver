@@ -289,12 +289,12 @@ void *Server::WorkThreadProc(void *args) {
                 packet_index++;
             }
 
-//            //update status
-//            char sql_update[1024];
-//            sprintf(sql_update, "UPDATE t_image SET send = 1 WHERE id = %d", image_id);
-//            db.execute(sql_update);
+           //update status
+           char sql_update[1024];
+           sprintf(sql_update, "UPDATE t_image SET send = 1 WHERE id = %d", image_id);
+           db.execute(sql_update);
         }
-        sleep(1);
+        //sleep(1);
     }
     //End thread
     return NULL;

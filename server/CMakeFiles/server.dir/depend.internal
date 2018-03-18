@@ -36,13 +36,13 @@ CMakeFiles/server.dir/protobuf/alarm.pb.cc.o
  /usr/local/hhit/detection/msserver/server/protobuf/alarm.pb.cc
  /usr/local/hhit/detection/msserver/server/protobuf/alarm.pb.h
 CMakeFiles/server.dir/server.cpp.o
- ./db/sqlite3pp.h
  ./protobuf/alarm.pb.h
  ./utility/Utility.h
  ./utility/global.hpp
  ./utility/hhlog.hpp
  /usr/local/hhit/detection/msserver/server/HHPacket.hpp
  /usr/local/hhit/detection/msserver/server/client.h
+ /usr/local/hhit/detection/msserver/server/db/sqlite3pp.h
  /usr/local/hhit/detection/msserver/server/hhthread.h
  /usr/local/hhit/detection/msserver/server/server.cpp
  /usr/local/hhit/detection/msserver/server/server.h
