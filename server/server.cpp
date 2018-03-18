@@ -124,6 +124,8 @@ void *Server::HandleClient(void *args) {
         }
         else if(n < 0) {
             HHLOG2("Error while receiving message from client: %s", client->name);
+        }else {
+            HHPRINT("handle client msg");
         }
     }
 
@@ -139,8 +141,8 @@ bool Server::SendPacket(Client &client, int packet_index,
     int packetSize = headerSize + msgSize;
 
     cout << " send to:" << "Client " << client.name << endl;
-    cout << "packetSize: " << packetSize << endl;
-    cout << "msgSize: " << msgSize << endl;
+//    cout << "packetSize: " << packetSize << endl;
+//    cout << "msgSize: " << msgSize << endl;
 
     char msgBuff[msgSize];
     msg.SerializeToArray(msgBuff,msgSize);
@@ -175,7 +177,6 @@ bool Server::SendPacket(Client &client, int packet_index,
 void Server::SendToAll(int packet_index, AlarmInfo info) {
     //Acquire the lock
     HHThread::LockMutex("'SendToAll()'");
-    HHPRINT("SendToAll");
     HHPRINT2("total client number ", clients.size());
     for(size_t i=0; i<clients.size(); i++) {
         HHHeader header;
@@ -206,7 +207,7 @@ void *Server::WorkThreadProc(void *args) {
     while(1)
     {
         // query image
-        HHPRINT("query image");
+//        HHPRINT("-------query t_image by id---------");
         char sql_image[256];
         sprintf(sql_image, "SELECT id, width, height FROM t_image WHERE send = %d", 0);
         sqlite3pp::query qry_image(db, sql_image);
@@ -219,7 +220,7 @@ void *Server::WorkThreadProc(void *args) {
 //            cout << "height = " << height << endl;
 
             //query alarm by image_id
-            HHPRINT("-------query alarm by image_id---------");
+//            HHPRINT("-------query alarm by image_id---------");
             char sql[256];
             sprintf(sql, "SELECT id, obj_type, timestamp, x, y, w, h,start_timestamp, end_timestamp, credibility, \
                              alarm_pic, alarm_vid, src_image FROM t_alarminfo WHERE image_id = %d", image_id);
@@ -254,6 +255,7 @@ void *Server::WorkThreadProc(void *args) {
 //                cout << "src_image = " << src_image << endl;
 
                 //alarm_image
+//                    std::ifstream ifs_alarm(alarm_pic);
                 std::ifstream ifs_alarm("002.jpg");
                 if(!ifs_alarm)
                 {
@@ -289,12 +291,12 @@ void *Server::WorkThreadProc(void *args) {
                 packet_index++;
             }
 
-           //update status
-           char sql_update[1024];
-           sprintf(sql_update, "UPDATE t_image SET send = 1 WHERE id = %d", image_id);
-           db.execute(sql_update);
+//            //update status
+//            char sql_update[1024];
+//            sprintf(sql_update, "UPDATE t_image SET send = 1 WHERE id = %d", image_id);
+//            db.execute(sql_update);
         }
-        //sleep(1);
+        sleep(1);
     }
     //End thread
     return NULL;
