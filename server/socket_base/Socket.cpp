@@ -125,7 +125,7 @@ bool Socket::send ( void* data, int size) const{
     int status = ::send ( m_sock, data, size, MSG_NOSIGNAL );
     if ( status == -1 )
     {
-        std::cout << "status == -1   errno == " << errno << "  in Socket::send\n";
+        std::cout << "send: " << "status == -1   errno == " << errno << "  in Socket::send\n";
         return false;
     }
     else
@@ -169,12 +169,12 @@ bool Socket::recv ( void* data, int size) const
     memset ( buf, 0, MAXRECV + 1 );
     
     //int status = ::recv ( m_sock, buf, MAXRECV, 0 );
-    int status = ::recv ( m_sock, buf, size,MSG_WAITALL );
+    int status = ::recv ( m_sock, buf, size, MSG_WAITALL );
 
     
     if ( status == -1 )
     {
-        std::cout << "status == -1   errno == " << errno << "  in Socket::recv\n";
+        std::cout << "recv: " << "status == -1   errno == " << errno << "  in Socket::recv\n";
         return 0;
     }
     else if ( status == 0 )
@@ -208,11 +208,17 @@ bool Socket::connect ( const std::string host, const int port )
     return false;
 }
 
+bool Socket::is_valid() const{
+    std::cout << "is_valid: " << m_sock << std::endl;
+    return m_sock != -1;
+}
+
 
 void Socket::close()
 {
     std::cout << "socket close >>>>>>>>>>" << std::endl;
-    ::close(m_sock);
+//    ::close(m_sock);
+    ::shutdown(m_sock, 2);
 }
 
 void Socket::set_non_blocking ( const bool b )

@@ -1,5 +1,5 @@
 #include "server.h"
-#include "../db/sqlite3pp.h"
+#include "db/sqlite3pp.h"
 
 using namespace std;
 
@@ -65,14 +65,16 @@ void Server::AcceptAndDispatch() {
 
         //block here waiting for client;
         bool ret = serverSock.accept(client->sock);
-
+        
+        HHPRINT("new client arrived,create the client thread!");
         if(ret == false) {
             HHLOG("Error on accept");
-            exit(0);
+//            exit(0);
         }
         else {
             client_thread->Create((void *) Server::HandleClient, client);
         }
+        sleep(2);
     }
 }
 
@@ -144,24 +146,30 @@ bool Server::SendPacket(Client &client, int packet_index,
     msg.SerializeToArray(msgBuff,msgSize);
 
     // packet
-    char packetBuff[packetSize];
+//    char packetBuff[packetSize];
+    char *packetBuff = new char[packetSize];
+    memset(packetBuff, 0, packetSize);
+    
     //头信息
     memcpy(packetBuff, &header, headerSize);
     //msg 信息
     memcpy(packetBuff + headerSize, msgBuff, msgSize);
 
     //TODO: 分小块发送
+    bool ret = true;
     if(!client.sock.is_valid()){
+        ret = false;
         HHLOG("invalid client socket >>>>>>");
     }else {
-        bool ret = client.sock.send(packetBuff, packetSize);
+        ret = client.sock.send(packetBuff, packetSize);
         if(!ret){
             cout << "socket send error !" << endl;
-            return false;
         }
     }
+    
+    delete []packetBuff;
 
-    return true;
+    return ret;
 }
 
 void Server::SendToAll(int packet_index, AlarmInfo info) {
@@ -177,9 +185,10 @@ void Server::SendToAll(int packet_index, AlarmInfo info) {
         header.type = 1;
         header.reserved = 0;
 
-        SendPacket(clients[i], packet_index, info, header);
-
-        sleep(1);
+        bool ret = SendPacket(clients[i], packet_index, info, header);
+        if(ret == false){
+            sleep(1);
+        }
     }
 
     //Release the lock
@@ -205,9 +214,9 @@ void *Server::WorkThreadProc(void *args) {
             int image_id, width, height, send;
 
             v.getter() >> image_id >> width >> height >> send;
-            cout << "image_id = " << image_id << endl;
-            cout << "width = " <<width << endl;
-            cout << "height = " << height << endl;
+//            cout << "image_id = " << image_id << endl;
+//            cout << "width = " <<width << endl;
+//            cout << "height = " << height << endl;
 
             //query alarm by image_id
             HHPRINT("-------query alarm by image_id---------");
@@ -229,23 +238,23 @@ void *Server::WorkThreadProc(void *args) {
                     continue;
                 }
 
-                cout << "image_id = " << image_id << endl;
-                cout << "id = " << id << endl;
-                cout << "obj_type = " <<obj_type << endl;
-                cout << "timestamp = " << timestamp << endl;
-                cout << "x = " << x << endl;
-                cout << "y = " << y << endl;
-                cout << "w = " << w << endl;
-                cout << "h = " << h << endl;
-                cout << "start_timestamp = " << start_timestamp << endl;
-                cout << "end_timestamp = " << end_timestamp << endl;
-                cout << "credibility = " << credibility << endl;
-                cout << "alarm_pic = " << alarm_pic << endl;
-                cout << "alarm_vid = " << alarm_vid << endl;
-                cout << "src_image = " << src_image << endl;
+//                cout << "image_id = " << image_id << endl;
+//                cout << "id = " << id << endl;
+//                cout << "obj_type = " <<obj_type << endl;
+//                cout << "timestamp = " << timestamp << endl;
+//                cout << "x = " << x << endl;
+//                cout << "y = " << y << endl;
+//                cout << "w = " << w << endl;
+//                cout << "h = " << h << endl;
+//                cout << "start_timestamp = " << start_timestamp << endl;
+//                cout << "end_timestamp = " << end_timestamp << endl;
+//                cout << "credibility = " << credibility << endl;
+//                cout << "alarm_pic = " << alarm_pic << endl;
+//                cout << "alarm_vid = " << alarm_vid << endl;
+//                cout << "src_image = " << src_image << endl;
 
                 //alarm_image
-                std::ifstream ifs_alarm(alarm_pic);
+                std::ifstream ifs_alarm("002.jpg");
                 if(!ifs_alarm)
                 {
                     cout << "Error open file..." << endl;
@@ -280,10 +289,10 @@ void *Server::WorkThreadProc(void *args) {
                 packet_index++;
             }
 
-            //update status
-            char sql_update[1024];
-            sprintf(sql_update, "UPDATE t_image SET send = 1 WHERE id = %d", image_id);
-            db.execute(sql_update);
+//            //update status
+//            char sql_update[1024];
+//            sprintf(sql_update, "UPDATE t_image SET send = 1 WHERE id = %d", image_id);
+//            db.execute(sql_update);
         }
         sleep(1);
     }
