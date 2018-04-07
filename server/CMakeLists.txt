@@ -22,6 +22,7 @@ list(APPEND PROJECT_SOURCE_DIR ${DB_SRC_LIST})
 add_definitions(-std=c++11)
 
 LINK_DIRECTORIES(
+        /usr/local/lib
 )
 
 include_directories (

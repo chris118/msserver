@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="hhclient"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="clang"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/Users/admin/src/cpp/msserver/hhclient/hhclient"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/admin/src/cpp/msserver/hhclient/hhclient/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/admin/src/cpp/msserver/hhclient/hhclient/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/admin/src/cpp/msserver/hhclient/hhclient/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/admin/src/cpp/msserver/hhclient/hhclient/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/Users/admin/src/cpp/msserver/hhclient/hhclient"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/admin/src/cpp/msserver/hhclient/hhclient/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/admin/src/cpp/msserver/hhclient/hhclient/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/admin/src/cpp/msserver/hhclient/hhclient/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/admin/src/cpp/msserver/hhclient/hhclient/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/Users/admin/src/cpp/msserver/hhclient/hhclient"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/admin/src/cpp/msserver/hhclient/hhclient/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/admin/src/cpp/msserver/hhclient/hhclient/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/admin/src/cpp/msserver/hhclient/hhclient/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/admin/src/cpp/msserver/hhclient/hhclient/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="hhclient">
+				<Option output="/Users/admin/src/cpp/msserver/hhclient/hhclient/libhhclient.dylib" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/admin/src/cpp/msserver/hhclient/hhclient"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Users/admin/src/cpp/msserver/hhclient/hhclient/./core"/>
+					<Add directory="/Users/admin/src/cpp/msserver/hhclient/hhclient/./protobuf"/>
+					<Add directory="/Users/admin/src/cpp/msserver/hhclient/hhclient/./socket_base"/>
+					<Add directory="/Users/admin/src/cpp/msserver/hhclient/hhclient/./socket_client"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/cuda/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/admin/src/cpp/msserver/hhclient/hhclient/Makefile&quot;  VERBOSE=1 hhclient"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/admin/src/cpp/msserver/hhclient/hhclient/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/admin/src/cpp/msserver/hhclient/hhclient/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/admin/src/cpp/msserver/hhclient/hhclient/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="hhclient/fast">
+				<Option output="/Users/admin/src/cpp/msserver/hhclient/hhclient/libhhclient.dylib" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/admin/src/cpp/msserver/hhclient/hhclient"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Users/admin/src/cpp/msserver/hhclient/hhclient/./core"/>
+					<Add directory="/Users/admin/src/cpp/msserver/hhclient/hhclient/./protobuf"/>
+					<Add directory="/Users/admin/src/cpp/msserver/hhclient/hhclient/./socket_base"/>
+					<Add directory="/Users/admin/src/cpp/msserver/hhclient/hhclient/./socket_client"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/cuda/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/admin/src/cpp/msserver/hhclient/hhclient/Makefile&quot;  VERBOSE=1 hhclient/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/admin/src/cpp/msserver/hhclient/hhclient/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/admin/src/cpp/msserver/hhclient/hhclient/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/admin/src/cpp/msserver/hhclient/hhclient/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/Users/admin/src/cpp/msserver/hhclient/hhclient">
+			<Option target="hhclient"/>
+		</Unit>
+		<Unit filename="/Users/admin/src/cpp/msserver/hhclient/hhclient/HHClient.cpp">
+			<Option target="hhclient"/>
+		</Unit>
+		<Unit filename="/Users/admin/src/cpp/msserver/hhclient/hhclient/HHClient.hpp">
+			<Option target="hhclient"/>
+		</Unit>
+		<Unit filename="/Users/admin/src/cpp/msserver/hhclient/hhclient/core/ThreadPool.cpp">
+			<Option target="hhclient"/>
+		</Unit>
+		<Unit filename="/Users/admin/src/cpp/msserver/hhclient/hhclient/core/ThreadPool.h">
+			<Option target="hhclient"/>
+		</Unit>
+		<Unit filename="/Users/admin/src/cpp/msserver/hhclient/hhclient/protobuf/alarm.pb.cc">
+			<Option target="hhclient"/>
+		</Unit>
+		<Unit filename="/Users/admin/src/cpp/msserver/hhclient/hhclient/socket_base/Socket.cpp">
+			<Option target="hhclient"/>
+		</Unit>
+		<Unit filename="/Users/admin/src/cpp/msserver/hhclient/hhclient/socket_base/Socket.h">
+			<Option target="hhclient"/>
+		</Unit>
+		<Unit filename="/Users/admin/src/cpp/msserver/hhclient/hhclient/socket_client/ClientSocket.cpp">
+			<Option target="hhclient"/>
+		</Unit>
+		<Unit filename="/Users/admin/src/cpp/msserver/hhclient/hhclient/socket_client/ClientSocket.h">
+			<Option target="hhclient"/>
+		</Unit>
+		<Unit filename="/Users/admin/src/cpp/msserver/hhclient/hhclient/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

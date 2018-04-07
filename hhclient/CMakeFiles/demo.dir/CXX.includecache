@@ -12,7 +12,7 @@ string
 vector
 -
 
-/usr/local/hhit/detection/msserver/hhclient/main.cpp
+/Users/admin/src/cpp/msserver/hhclient/main.cpp
 fstream
 -
 stdlib.h
@@ -36,5 +36,5 @@ pthread.h
 signal.h
 -
 HHClient.hpp
-/usr/local/hhit/detection/msserver/hhclient/HHClient.hpp
+/Users/admin/src/cpp/msserver/hhclient/HHClient.hpp
 

@@ -4,13 +4,13 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/usr/local/hhit/detection/msserver/hhclient/hhclient/HHClient.cpp" "/usr/local/hhit/detection/msserver/hhclient/hhclient/CMakeFiles/hhclient.dir/HHClient.cpp.o"
-  "/usr/local/hhit/detection/msserver/hhclient/hhclient/core/ThreadPool.cpp" "/usr/local/hhit/detection/msserver/hhclient/hhclient/CMakeFiles/hhclient.dir/core/ThreadPool.cpp.o"
-  "/usr/local/hhit/detection/msserver/hhclient/hhclient/protobuf/alarm.pb.cc" "/usr/local/hhit/detection/msserver/hhclient/hhclient/CMakeFiles/hhclient.dir/protobuf/alarm.pb.cc.o"
-  "/usr/local/hhit/detection/msserver/hhclient/hhclient/socket_base/Socket.cpp" "/usr/local/hhit/detection/msserver/hhclient/hhclient/CMakeFiles/hhclient.dir/socket_base/Socket.cpp.o"
-  "/usr/local/hhit/detection/msserver/hhclient/hhclient/socket_client/ClientSocket.cpp" "/usr/local/hhit/detection/msserver/hhclient/hhclient/CMakeFiles/hhclient.dir/socket_client/ClientSocket.cpp.o"
+  "/Users/admin/src/cpp/msserver/hhclient/hhclient/HHClient.cpp" "/Users/admin/src/cpp/msserver/hhclient/hhclient/CMakeFiles/hhclient.dir/HHClient.cpp.o"
+  "/Users/admin/src/cpp/msserver/hhclient/hhclient/core/ThreadPool.cpp" "/Users/admin/src/cpp/msserver/hhclient/hhclient/CMakeFiles/hhclient.dir/core/ThreadPool.cpp.o"
+  "/Users/admin/src/cpp/msserver/hhclient/hhclient/protobuf/alarm.pb.cc" "/Users/admin/src/cpp/msserver/hhclient/hhclient/CMakeFiles/hhclient.dir/protobuf/alarm.pb.cc.o"
+  "/Users/admin/src/cpp/msserver/hhclient/hhclient/socket_base/Socket.cpp" "/Users/admin/src/cpp/msserver/hhclient/hhclient/CMakeFiles/hhclient.dir/socket_base/Socket.cpp.o"
+  "/Users/admin/src/cpp/msserver/hhclient/hhclient/socket_client/ClientSocket.cpp" "/Users/admin/src/cpp/msserver/hhclient/hhclient/CMakeFiles/hhclient.dir/socket_client/ClientSocket.cpp.o"
   )
-set(CMAKE_CXX_COMPILER_ID "GNU")
+set(CMAKE_CXX_COMPILER_ID "Clang")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH

@@ -4,17 +4,17 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/usr/local/hhit/detection/msserver/server/client.cpp" "/usr/local/hhit/detection/msserver/server/CMakeFiles/server.dir/client.cpp.o"
-  "/usr/local/hhit/detection/msserver/server/db/sqlite3pp.cpp" "/usr/local/hhit/detection/msserver/server/CMakeFiles/server.dir/db/sqlite3pp.cpp.o"
-  "/usr/local/hhit/detection/msserver/server/db/sqlite3ppext.cpp" "/usr/local/hhit/detection/msserver/server/CMakeFiles/server.dir/db/sqlite3ppext.cpp.o"
-  "/usr/local/hhit/detection/msserver/server/hhthread.cpp" "/usr/local/hhit/detection/msserver/server/CMakeFiles/server.dir/hhthread.cpp.o"
-  "/usr/local/hhit/detection/msserver/server/main.cpp" "/usr/local/hhit/detection/msserver/server/CMakeFiles/server.dir/main.cpp.o"
-  "/usr/local/hhit/detection/msserver/server/protobuf/alarm.pb.cc" "/usr/local/hhit/detection/msserver/server/CMakeFiles/server.dir/protobuf/alarm.pb.cc.o"
-  "/usr/local/hhit/detection/msserver/server/server.cpp" "/usr/local/hhit/detection/msserver/server/CMakeFiles/server.dir/server.cpp.o"
-  "/usr/local/hhit/detection/msserver/server/socket_base/Socket.cpp" "/usr/local/hhit/detection/msserver/server/CMakeFiles/server.dir/socket_base/Socket.cpp.o"
-  "/usr/local/hhit/detection/msserver/server/utility/Utility.cpp" "/usr/local/hhit/detection/msserver/server/CMakeFiles/server.dir/utility/Utility.cpp.o"
+  "/Users/admin/src/cpp/msserver/server/client.cpp" "/Users/admin/src/cpp/msserver/server/CMakeFiles/server.dir/client.cpp.o"
+  "/Users/admin/src/cpp/msserver/server/db/sqlite3pp.cpp" "/Users/admin/src/cpp/msserver/server/CMakeFiles/server.dir/db/sqlite3pp.cpp.o"
+  "/Users/admin/src/cpp/msserver/server/db/sqlite3ppext.cpp" "/Users/admin/src/cpp/msserver/server/CMakeFiles/server.dir/db/sqlite3ppext.cpp.o"
+  "/Users/admin/src/cpp/msserver/server/hhthread.cpp" "/Users/admin/src/cpp/msserver/server/CMakeFiles/server.dir/hhthread.cpp.o"
+  "/Users/admin/src/cpp/msserver/server/main.cpp" "/Users/admin/src/cpp/msserver/server/CMakeFiles/server.dir/main.cpp.o"
+  "/Users/admin/src/cpp/msserver/server/protobuf/alarm.pb.cc" "/Users/admin/src/cpp/msserver/server/CMakeFiles/server.dir/protobuf/alarm.pb.cc.o"
+  "/Users/admin/src/cpp/msserver/server/server.cpp" "/Users/admin/src/cpp/msserver/server/CMakeFiles/server.dir/server.cpp.o"
+  "/Users/admin/src/cpp/msserver/server/socket_base/Socket.cpp" "/Users/admin/src/cpp/msserver/server/CMakeFiles/server.dir/socket_base/Socket.cpp.o"
+  "/Users/admin/src/cpp/msserver/server/utility/Utility.cpp" "/Users/admin/src/cpp/msserver/server/CMakeFiles/server.dir/utility/Utility.cpp.o"
   )
-set(CMAKE_CXX_COMPILER_ID "GNU")
+set(CMAKE_CXX_COMPILER_ID "Clang")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH

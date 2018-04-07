@@ -1,18 +1,12 @@
-*.cmake
-CMakeCache.txt
-CMakeFiles/
-Makefile
-*.caffemodel
-*.prototxt
-hhdetector
+server/*.cmake
+server/CMakeCache.txt
+server/CMakeFiles/
+server/Makefile
 
-
-encapsulation_mysql/CMakeFiles/
-carDetector/CMakeFiles/
-carDetector/*.cmake
-output/
-output/
-input/
+hhclient/*.cmake
+hhclient/CMakeCache.txt
+hhclient/CMakeFiles/
+hhclient/Makefile
 
 # Compiled Object files
 *.slo

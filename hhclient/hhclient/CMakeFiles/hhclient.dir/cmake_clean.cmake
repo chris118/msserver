@@ -5,7 +5,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/hhclient.dir/core/ThreadPool.cpp.o"
   "CMakeFiles/hhclient.dir/socket_client/ClientSocket.cpp.o"
   "libhhclient.pdb"
-  "libhhclient.so"
+  "libhhclient.dylib"
 )
 
 # Per-language clean rules from dependency scanning.
