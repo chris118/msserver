@@ -2,11 +2,15 @@ server/*.cmake
 server/CMakeCache.txt
 server/CMakeFiles/
 server/Makefile
+server/cmake-build-debug
+server/.idea
 
 hhclient/*.cmake
 hhclient/CMakeCache.txt
 hhclient/CMakeFiles/
 hhclient/Makefile
+hhclient/cmake-build-debug
+hhclient/.idea
 
 # Compiled Object files
 *.slo
