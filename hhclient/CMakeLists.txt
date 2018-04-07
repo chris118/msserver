@@ -4,7 +4,8 @@ project (demo)
 
 aux_source_directory(. PROJECT_SOURCE_DIR)
 
-LINK_DIRECTORIES(./hhclient/)
+LINK_DIRECTORIES(./hhclient/
+        ../hhclient/)
 
 include_directories (./hhclient/)
 
