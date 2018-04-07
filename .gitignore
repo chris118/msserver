@@ -1,22 +1,22 @@
 server/*.cmake
-server/CMakeCache.txt
 server/CMakeFiles/
-server/Makefile
-server/cmake-build-debug
-server/.idea
+server/.idea/
+server/cmake-build-debug/
 
-hhclient/*.cmake
-hhclient/CMakeCache.txt
 hhclient/CMakeFiles/
-hhclient/Makefile
-hhclient/cmake-build-debug
-hhclient/.idea
+hhclient/cmake-build-debug/
+hhclient/.idea/
+hhclient/hhclient/cmake-build-debug/
 
 # Compiled Object files
 *.slo
 *.lo
 *.o
 *.obj
+*.cmake
+CMakeCache.txt
+Makefile
+workspace.xml
 
 # Precompiled Headers
 *.gch
