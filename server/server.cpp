@@ -257,8 +257,7 @@ void *Server::WorkThreadProc(void *args) {
 //                cout << "src_image = " << src_image << endl;
 
                 //alarm_image
-//                    std::ifstream ifs_alarm(alarm_pic);
-                std::ifstream ifs_alarm("002.jpg");
+                std::ifstream ifs_alarm(alarm_pic);
                 if(!ifs_alarm)
                 {
                     cout << "Error open file..." << endl;
